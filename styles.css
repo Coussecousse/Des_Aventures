@@ -77,8 +77,6 @@ button{
     object-fit: contain;
 }
 
-
-
 @media screen and (min-width: 768px){
     #Dés {
         top: 35%;
