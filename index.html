@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dés Aventures</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4ba6d56c15.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+  <body class="vw-100">
+    <header class="position-absolute me-4" style="right: var(--width-menu);">
+      <div class="position-absolute me-4">
+        <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
+        <nav>
+          <ul class="nav flex-column float-end border border-light mt-2 rounded-4 fs-4 bg-black p-3 visually-hidden">
+            <li class="nav-item"><a class="nav-link link-light text-center" aria-current="page" href="#home">Accueil</a><span class="d-flex mx-auto"></span></li>
+            <li class="nav-item"><a class="nav-link link-light text-center"href="#resentation">Presentation</a><span class="d-flex mx-auto"></span></li>
+            <li class="nav-item"><a class="nav-link link-light text-center"href="">Évènements</a><span class="d-flex mx-auto"></span></li>
+            <li class="nav-item"><a class="nav-link link-light text-center rounded-bottom"href="">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="w-100">
+      <section id="home"class="vh-100 bg-black" style="width: 100vw;">
+        <div class="h-100 d-inline-flex align-items-center flex-column container-fluid">
+          <div class="container position-absolute top-50 start-50 translate-middle">
+            <div class="row ">
+              <div class="order-0 col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
+                <img src="img_modif/Dés-min.webp" alt="Dés" class="object-fit" id="Dés">
+              </div>
+              <div class="order-1 order-sm-2 col-12 d-flex justify-content-center">
+                <img src="img_modif/aventures-min.webp" alt="Aventures" class="object-fit" id="Aventures">
+              </div>
+              <div class="d-flex justify-content-center order-2 order-sm-1 col-12 col-sm-6 justify-content-sm-start">
+                <img src="img_modif/white_dice-min.webp" alt="Dé blanc" id="white-dice">
+                <img src="img_modif/green_dice-min.webp" alt="Dé vert" id="green-dice">
+              </div>
+            </div>
+            <div class="home__p text-white my-4 text-center col-12 col-sm-6 col-lg-5 mx-auto px-2">
+              <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus urna, facilisis sit amet dignissim condimentum, condimentum ac lectus. Donec.</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-end mt-auto p-4">
+            <div class="flèche "><i class="fa-solid fa-angles-down text-white fa-2xl"></i></div>
+          </div>
+        </div>
+      </section>
+      <section id="presentation">
+        <!-- <h2>Dés Aventures c'est surtout...</h2> -->
+        <div class="presentation__container">
+          <div>
+            <img src="img/img1.jpg" alt="Groupe de personnes assis à une table jouant à un jeu de rôle en s'aidant d'un écran">
+            <p>...Des aventures épiques</p>
+          </div>
+          <div>
+            <img src="img/img2.jpg" alt="Groupe de personnes assis sur un banc de pic-nique dans le noir avec une petite lumière jouant à un jeu de rôle">
+            <p>Des rires...</p>
+          </div>
+          <div>
+            <img src="img/img5.jpg" alt="Groupe de personnes déguisées jouant autour d'une table à un jeu de rôle" >
+            <p>...Des soirées animées</p>
+          </div>
+        </div>
+        <h2>Bref, une grande famille !</h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+
+          </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/img4.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/img6.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/img8.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/img3.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/img7.jpg" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item">
+                <img src="img/img9.jpg" class="d-block w-100" alt="...">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <img src="img/Dés_aventures.png" alt="Logo Dés Aventures">
+      <a href="">Évènements & Contact</a>
+      <a href="">Facebook</a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>

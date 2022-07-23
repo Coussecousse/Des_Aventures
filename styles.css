@@ -1,0 +1,105 @@
+/* RACINE */
+:root {
+    --color-green: #2AD496; 
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 700;
+
+    --ff:'Roboto', sans-serif;
+
+    --fs-400:;
+    --fs-500: 1rem;
+    --fs-600:;
+
+    --width-menu: 70px
+}
+
+/* GENERAL */
+
+* {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--ff);
+    font-size: var(--fs-500);
+}
+/* BOUTON MENU & MENU */
+#dice-menu {
+    height: var(--width-menu);
+    width: var(--width-menu);
+}
+.nav-item > span{
+    background: var(--color-green);
+    height: 1px;
+    width: 35%;
+}
+.nav-item:hover {
+    background-color: var(--bs-gray-700);
+}
+.nav-item:first-child{
+    border-top-left-radius: var(--bs-border-radius-xl);
+    border-top-right-radius: var(--bs-border-radius-xl);
+}
+.nav-item:last-child{
+    border-bottom-left-radius: var(--bs-border-radius-xl);
+    border-bottom-right-radius: var(--bs-border-radius-xl);
+}
+button{
+    border: none;
+}
+
+/* STYLE DE #HOME */
+#Dés{
+    height: clamp(10vw, 14vh, 45vw);
+    position: relative;
+    top: 15%;
+}
+#Aventures {
+    height: clamp(9vw, 12vh, 45vw);
+    z-index: 1;
+}
+#white-dice, #green-dice {
+    height: clamp(12vw, 16vh, 50vw);
+    position: relative;
+}
+#white-dice {
+    left: 5%;
+    transform: rotate(-30deg);
+}
+#green-dice {
+    left: -6.5%;
+    top: 4%;
+}
+.object-fit {
+    object-fit: contain;
+}
+
+
+
+@media screen and (min-width: 768px){
+    #Dés {
+        top: 35%;
+        left: 2%;
+    }
+    #Aventures {
+        z-index: 1;
+    }
+    #white-dice, #green-dice {
+        top: 30%;
+    }
+    #green-dice {
+        left: -9%;
+        top: 39%;
+    }
+}
+
+/* STYLE PRESENTATION */
+#presentation {
+    background: url('img_modif/background-dragon-min.webp');
+}
+.home__p {
+    font-size: clamp(.875rem, 1rem, 2.2rem);
+}
