@@ -6,7 +6,7 @@
     --fw-400: 400;
     --fw-500: 700;
 
-    --ff:'Roboto', sans-serif;
+    --ff:'serif';
 
     --fs-400:;
     --fs-500: 1rem;
@@ -20,10 +20,10 @@
 * {
     margin: 0 !important;
     padding: 0 !important;
-    box-sizing: border-box;
+    box-sizing: border-box !important;
 }
 body {
-    font-family: var(--ff);
+    font-family: var(--ff) !important;
     font-size: var(--fs-500);
 }
 /* BOUTON MENU & MENU */
@@ -53,30 +53,36 @@ button{
 
 /* STYLE DE #HOME */
 #Dés{
-    height: clamp(10vw, 14vh, 45vw);
+    height: clamp(9vw, 20vw, 55vw);
     position: relative;
     top: 15%;
 }
 #Aventures {
-    height: clamp(9vw, 12vh, 45vw);
+    height: clamp(8vw, 20vw, 53vw);
     z-index: 1;
 }
+.dice__container {
+    height: 100px !important;
+    border: solid red;
+}
 #white-dice, #green-dice {
-    height: clamp(12vw, 16vh, 50vw);
-    position: relative;
+    height: clamp(5vw, 28vw, 250px);
+    position: absolute;
 }
 #white-dice {
-    left: 5%;
     transform: rotate(-30deg);
+    left: -65px;
 }
 #green-dice {
-    left: -6.5%;
-    top: 4%;
+    left: -12px;
+    top: 6px;
 }
 .object-fit {
     object-fit: contain;
 }
-
+.dice__container {
+    height: 100%;
+}
 @media screen and (min-width: 768px){
     #Dés {
         top: 35%;
@@ -86,18 +92,26 @@ button{
         z-index: 1;
     }
     #white-dice, #green-dice {
-        top: 30%;
     }
     #green-dice {
-        left: -9%;
-        top: 39%;
     }
 }
 
 /* STYLE PRESENTATION */
 #presentation {
-    background: url('img_modif/background-dragon-min.webp');
+    background-color: ghostwhite;
 }
 .home__p {
     font-size: clamp(.875rem, 1rem, 2.2rem);
+}
+.presentation__img {
+    -webkit-box-shadow: 10px 10px 23px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 23px -1px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 23px -1px rgba(0,0,0,0.75);
+    z-index: 2;
+}
+#presentation p {
+}
+.brush {
+    z-index: -1;
 }
