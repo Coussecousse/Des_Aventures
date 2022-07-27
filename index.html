@@ -17,7 +17,7 @@
     <script src="https://kit.fontawesome.com/4ba6d56c15.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </head>
-  <body class="vw-100">
+  <body class="vw-100 bg-black">
     <header class="position-absolute me-4" style="right: var(--width-menu);">
       <div class="position-absolute me-4">
         <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
@@ -59,20 +59,30 @@
         </div>
       </section>
       <section id="presentation">
-        <h2 class="d-flex justify-content-center fs-1">Dés Aventures c'est surtout...</h2>
-        <div class="presentation__container container-fluid py-5">
-          <div class="text-center row fs-1 text-dark my-5 py-5 col-12 col-md-11 mx-auto border-2 border border-primary">
-            <img src="img_modif/dlf.pt-black-line-png-4072986.png" alt="" class="brush position-absolute">
+        <h1 class="d-flex justify-content-center m-md-5 mx-2 my-5 text-center text-white">Dés Aventures c'est surtout...</h1>
+        <div class="presentation__container container-fluid py-5 position-relative">
+          <img src="img_modif/dice-8-1.png" class="position-absolute presentation__dice dice-600" style="transform: rotate(75deg);"></img>
+          <img src="img_modif/dice-8-2.png"class="position-absolute presentation__dice dice-500" style="top: 10%;left: 88vw;"></img>
+          <img src="img_modif/dice-12.png" class="position-absolute presentation__dice dice-400" style="top: 20%;left: 10vw;transform:rotate(-30deg)"></img>
+          <div class="presensation__bubble position-absolute bubble-400 shadow" style="top: 50%;left: 3vw;"></div>
+          <div class="presensation__bubble position-absolute bubble-600 shadow" style="top: 55%;left: 70vw;"></div>
+          <div class="presensation__bubble position-absolute bubble-500 shadow" style="top: 70%;left: 20vw;"></div>
+
+          <div class="text-center row fs-1 text-white my-5 py-5 col-12 col-md-11 mx-auto position-relative">
             <img src="img/img1.jpg" alt="Groupe de personnes assis à une table jouant à un jeu de rôle en s'aidant d'un écran" class="presentation__img col-11 col-md-6 order-md-1 mx-auto ms-md-auto">
-            <p class="col-12 col-md-4 me-auto border border-success mt-md-auto mx-auto">...Des aventures épiques</p>
+            <img src="img_modif/knight-on-horse-clipart-black-and-white-clip-art-images-619365.png" alt="" class="presentation__knight position-absolute bottom-0" style="height: clamp(80px, 15vw, 250px);width: auto;left:50%">
+            <div class="col-12 col-md-4 me-auto mt-md-auto mx-auto d-flex justify-content-evenly position-relative">
+              <img src="img_modif/output-onlinepngtools.png" alt="" class="presentation__brush position-absolute" style="top:-70%;">
+              <p class="col-auto align-self-end">...Des aventures épiques</p>
+            </div>
           </div>
-          <div class="row text-center fs-1 text-dark my-5 py-5 col-12 col-md-11 mx-auto border-2 border border-primary">
+          <div class="row text-center fs-1 text-white my-5 py-5 col-12 col-md-11 mx-auto">
             <img src="img/img2.jpg" alt="Groupe de personnes assis sur un banc de pic-nique dans le noir avec une petite lumière jouant à un jeu de rôle" class="presentation__img col-11 col-md-6 mx-auto">
-            <p class="col-12 col-md-4 ms-auto border border-success mt-md-auto mx-auto">Des rires...</p>
+            <p class="col-12 col-md-4 ms-auto mt-md-auto mx-auto">Des rires...</p>
           </div>
-          <div class="row text-center fs-1 text-dark col-12 col-md-11 mx-auto border-2 border border-primary">
+          <div class="row text-center fs-1 text-white col-12 col-md-11 mx-auto">
             <img src="img/img5.jpg" alt="Groupe de personnes déguisées jouant autour d'une table à un jeu de rôle" class="presentation__img col-11 col-md-6 order-md-1 mx-auto shadow" >
-            <p class="col-12 col-md-4 me-auto border border-success mt-md-auto mx-auto">...Des soirées animées</p>
+            <p class="col-12 col-md-4 me-auto mt-md-auto mx-auto">...Des soirées animées</p>
           </div>
         </div>
         <h2>Bref, une grande famille !</h2>
