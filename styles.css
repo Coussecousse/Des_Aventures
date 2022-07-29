@@ -153,7 +153,9 @@ h1 span {
       0 0 60px rgb(155, 155, 155);
   }
 }
-.presentation__knight {
+.presentation__icon {
+  height: clamp(80px, 15vw, 250px); 
+  width: auto !important;
   z-index: 2;
 }
 .dice-500 {
@@ -176,4 +178,15 @@ h1 span {
   z-index: -2;
   width: clamp(300px, 5rem, 700px);
   height: auto;
+}
+.jump {
+  animation : jump 3s ease-in-out infinite alternate;
+}
+@keyframes jump {
+  from {
+    transform: translateY(0);
+  }
+  to{
+    transform: translateY(10px);
+  }
 }
