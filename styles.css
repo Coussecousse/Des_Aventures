@@ -168,7 +168,7 @@ h1 span {
 }
 
 .presentation__dice {
-  z-index: -1;
+  z-index: -3;
 }
 .dice-600 {
   width: clamp(100px, 20vw, 200px);
