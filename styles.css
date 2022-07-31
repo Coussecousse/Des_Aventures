@@ -208,4 +208,35 @@ h1 span, h2 span {
       left:50% !important;
     }
 }
+@media screen and (min-width: 768px){
+  .footer__line {
+    transform: rotate(-90deg) translate(-50%);
+  }
+
+}
+.footer__link::after {
+  content:'';
+  width: 0;
+  height: 1px;
+  display: block;
+  position: relative;
+  background: #2ad496;
+  transition: .3s;
+}
+.footer__link::before {
+  content:'';
+  width: 0;
+  height: 1px;
+  display: block;
+  position: relative;
+  background: #2ad496;
+  transition: .3s;
+}
+
+.footer__link:hover::after {
+  width: 100%;
+}
+.footer__link:hover::before {
+  width: 100%;
+}
 
