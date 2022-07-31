@@ -28,7 +28,6 @@
 body {
   font-family: var(--ff) !important;
   font-size: var(--fs-500);
-  background-color: ghostwhite !important;
 }
 /* BOUTON MENU & MENU */
 #dice-menu {
@@ -106,7 +105,7 @@ button {
 /* STYLE PRESENTATION */
 #presentation {
   font-family: var(--ff-500);
-  font-weight: var(--ff-600);
+  font-weight: var(--fw-600);
 
 }
 h1,h2 {
@@ -209,3 +208,4 @@ h1 span, h2 span {
       left:50% !important;
     }
 }
+
