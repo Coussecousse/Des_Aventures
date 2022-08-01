@@ -30,10 +30,14 @@ body {
   font-size: var(--fs-500);
 }
 /* BOUTON MENU & MENU */
+header li {
+  cursor: pointer;
+}
 #dice-menu {
   height: var(--width-menu);
   width: var(--width-menu);
 }
+
 .nav-item > span {
   background: var(--color-green);
   height: 1px;
@@ -94,11 +98,6 @@ button {
   }
   #Aventures {
     z-index: 1;
-  }
-  #white-dice,
-  #green-dice {
-  }
-  #green-dice {
   }
 }
 

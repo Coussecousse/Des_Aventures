@@ -19,15 +19,15 @@
     <script src="script.js"></script>
   </head>
   <body class="w-100 bg-black">
-    <header class="position-absolute me-4" style="right: var(--width-menu);">
-      <div class="position-absolute me-4">
+    <header class="position-fixed me-md-4" style="right: 1rem; z-index: 10;top: 1rem">
+      <div class="position-relative me-md-4 mt-4" style="width: 300px">
         <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
-        <nav>
-          <ul class="nav flex-column float-end border border-light mt-2 rounded-4 fs-4 bg-black p-3 visually-hidden">
-            <li class="nav-item"><a class="nav-link link-light text-center" aria-current="page" href="#home">Accueil</a><span class="d-flex mx-auto"></span></li>
-            <li class="nav-item"><a class="nav-link link-light text-center"href="#resentation">Presentation</a><span class="d-flex mx-auto"></span></li>
-            <li class="nav-item"><a class="nav-link link-light text-center"href="">Évènements</a><span class="d-flex mx-auto"></span></li>
-            <li class="nav-item"><a class="nav-link link-light text-center rounded-bottom"href="">Contact</a></li>
+        <nav class="invisible" style="width: 200px; height: 200px">
+          <ul class="nav flex-column border border-light mt-2 rounded-4 fs-4 bg-black h-100 w-100">
+            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100" aria-current="page" href="#home">Accueil</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
+            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="#presentation">Presentation</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
+            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="">Évènements</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
+            <li class="h-25 nav-item d-flex justify-content-center"><a class="nav-link link-light text-center rounded-bottom align-self-center w-100"href="">Contact</a></li>
           </ul>
         </nav>
       </div>
