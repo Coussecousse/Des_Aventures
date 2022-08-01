@@ -21,6 +21,7 @@
 /* GENERAL */
 
 * {
+  margin:0;
   padding: 0 !important;
   box-sizing: border-box;
 }
@@ -115,7 +116,7 @@ h1 {
   font-size: clamp(2rem, 14vw,7rem) !important;
 }
 h2 {
-  font-size: clamp(1.5rem, 10vw, 5rem) !important;
+  font-size: clamp(1.5rem, 12vw, 6rem) !important;
 }
 h1 span, h2 span {
   color: #2ad496 !important;
@@ -239,3 +240,6 @@ h1 span, h2 span {
   width: 100%;
 }
 
+#presentation p {
+  margin:0 ;
+}
