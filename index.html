@@ -18,8 +18,8 @@
     <script src="https://kit.fontawesome.com/4ba6d56c15.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </head>
-  <body class="w-100 bg-black">
-    <header class="position-fixed me-md-4" style="right: 1rem; z-index: 10;top: 1rem">
+  <body class="vw-100 bg-black">
+    <header class="position-fixed me-md-4 me-3" style="right: 1rem; z-index: 10;top: 1rem">
       <div class="position-relative me-md-4 mt-4" style="width: 300px">
         <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
         <nav class="invisible" style="width: 200px; height: 200px">
@@ -37,20 +37,20 @@
         <div class="h-100 d-inline-flex align-items-center flex-column container-fluid">
           <div class="container position-absolute top-50 start-50 translate-middle">
             <div class="row">
-              <div class="order-0 col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end">
+              <div class="order-0 col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end align-content-sm-end">
                 <img src="img_modif/Dés-min.webp" alt="Dés" class="object-fit" id="Dés">
               </div>
               <div class="order-1 order-sm-2 col-12 d-flex justify-content-center">
                 <img src="img_modif/aventures-min.webp" alt="Aventures" class="object-fit" id="Aventures">
               </div>
-              <div class="dice__container d-flex justify-content-center order-2 order-sm-1 col-12 col-sm-6 mx-auto align-self-end">
-                <div class="position-relative">
+              <div class="dice__container d-flex order-2 order-sm-1 col-12 col-sm-6 mx-auto align-self-end justify-content-start">
+                <div class="d-sm-flex align-items-start justify-content-start">
                   <img src="img_modif/white_dice-min.webp" alt="Dé blanc" id="white-dice">
                   <img src="img_modif/green_dice-min.webp" alt="Dé vert" id="green-dice">
                 </div>
               </div>
             </div>
-            <div class="home__p text-white my-4 text-center col-12 col-sm-6 col-lg-5 mx-auto px-2">
+            <div class="home__p text-white mt-5 text-center col-12 col-sm-8 col-lg-6 mx-auto pt-5 px-3 ">
               <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus urna, facilisis sit amet dignissim condimentum, condimentum ac lectus. Donec.</p>
             </div>
           </div>
@@ -59,7 +59,7 @@
           </div>
         </div>
       </section>
-      <section id="presentation">
+      <section id="presentation w-100 overflow-hidden">
         <h1 class="justify-content-center m-md-5 mx-2 my-5 text-center text-white"><span>Dés Aventures </span><br>c'est surtout...</h1>
         <div class="presentation__container container-fluid py-5 position-relative">
           <img src="img_modif/dice-100.png" class="position-absolute presentation__dice dice-600" style="transform: rotate(75deg);"></img>
@@ -74,27 +74,27 @@
           <img src="img_modif/dice-4.png" class="position-absolute presentation__dice dice-600" style="top: 80%;left: 0vw;transform:rotate(-30deg)"></img>
           <div class="row text-center text-white my-md-5 my-2 py-5 col-12 col-md-11 mx-auto position-relative gap-5">
             <img src="img/img1.jpg" alt="Groupe de personnes assis à une table jouant à un jeu de rôle en s'aidant d'un écran" class="presentation__img col-11 col-md-6 order-md-1 mx-auto ms-md-auto">
-            <img src="img_modif/knight-on-horse-clipart-black-and-white-clip-art-images-619365.png" id = "knight" alt="Logo d'un chevalier" class="presentation__icon position-absolute bottom-0" style="left:10%; top:67%">
+            <img src="img_modif/knight-on-horse-clipart-black-and-white-clip-art-images-619365.png" id = "knight" alt="Logo d'un chevalier" class="presentation__icon position-absolute bottom-0" style="left:10%; top:55%">
             <div class="col-12 col-md-4 me-auto mt-md-auto mx-auto d-flex justify-content-evenly position-relative">
-              <img src="img_modif/brush-1.png" alt="" class="presentation__brush position-absolute" style="top:-100%;">
-              <p class="col-auto align-self-end">...Des aventures épiques</p>
+              <img src="img_modif/brush-1.png" alt="" class="presentation__brush position-absolute mt-md-5 pt-4 pt-xl-0 mt-xl-0" style="top:-100%;">
+              <p class="presentation__text -auto align-self-end mb-">...Des aventures épiques</p>
             </div>
           </div>
           <div class="row text-center text-white my-md-5 my-2 py-md-5 col-12 col-md-11 mx-auto position-relative gap-5">
             <img src="img/img2.jpg" alt="Groupe de personnes assis sur un banc de pic-nique dans le noir avec une petite lumière jouant à un jeu de rôle" class="presentation__img col-11 col-md-6 mx-auto">
             <img src="img_modif/dragon.png" alt="Logo d'un dragon" class="presentation__icon position-absolute" id="dragon" style="left:0;top:67%">
             <div class="col-12 col-md-4 me-auto mt-md-auto mx-auto d-flex justify-content-evenly position-relative">
-              <img src="img_modif/brush-2(2).png" alt="" class="presentation__brush-splash position-absolute" style="top:-450%">
-              <p class="col-auto align-self-end">Des rires...</p>
+              <img src="img_modif/brush-2(2).png" alt="" class="presentation__brush-splash position-absolute mt-5 pt-3 pt-sm-0" style="top:-450%">
+              <p class="presentation__text col-auto align-self-end">Des rires...</p>
             </div>
           </div>
           <div class="row text-center text-white my-md-5 my-2 py-5 col-12 col-md-11 mx-auto position-relative gap-5">
             <img src="img/img5.jpg" alt="Groupe de personnes déguisées jouant autour d'une table à un jeu de rôle" class="presentation__img col-11 col-md-6 order-md-1 mx-auto ms-md-auto" >
             <img src="img_modif/hat.png" class="presentation__icon position-absolute jump" alt="Logo d'un chapeau" id="hat" style="top:55%; right:0;">
             <div class="col-12 col-md-4 me-auto mt-md-auto mx-auto d-flex justify-content-evenly position-relative">
-              <img src="img_modif/brush-3.png" alt="" class="presentation__brush position-absolute" style="bottom:-250%;;
+              <img src="img_modif/brush-3.png" alt="" class="presentation__brush position-absolute mb-1 mb-sm-0" style="bottom:-250%;;
               ">
-              <p class="col-auto align-self-end">...Des soirées animées</p>
+              <p class="presentation__text col-auto align-self-end mb-0 mb-sm-1">...Des soirées animées</p>
             </div>
           </div>
         </div>
@@ -149,7 +149,7 @@
         <img src="img/Dés_aventures.png" alt="Logo Dés Aventures" class="mx-auto" style="height: 100%;">
       </div>
       <div class="mt-3 footer__line border mx-auto mx-md-0" style="height: 90%; width: 90px"></div>
-      <div class="my-3 me-md-0 d-flex justify-content-between align-self-center" style="width: 300px; height: fit-content;">
+      <div class="my-3 me-md-0 d-flex justify-content-evenly justify-content-md-between align-self-center" style="height: fit-content;width: 300px">
         <a class="footer__link text-decoration-none text-white fs-5" href="" style="transition: .5s;">Évènements & Contact</a>
         <a class="text-decoration-none text-white" href="https://www.facebook.com/desaventures" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
       </div>

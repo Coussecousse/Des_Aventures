@@ -21,7 +21,7 @@
 /* GENERAL */
 
 * {
-  margin:0;
+  margin:0 ;
   padding: 0 !important;
   box-sizing: border-box;
 }
@@ -60,30 +60,27 @@ button {
 
 /* STYLE DE #HOME */
 #Dés {
-  height: clamp(9vw, 20vw, 55vw);
+  height: clamp(70px, 22vw, 13rem);
   position: relative;
   top: 15%;
 }
 #Aventures {
-  height: clamp(8vw, 20vw, 53vw);
+  height: clamp(50px, 20vw, 12rem);
   z-index: 1;
 }
-.dice__container {
-  height: 100px !important;
-  border: solid red;
-}
+
 #white-dice,
 #green-dice {
-  height: clamp(5vw, 28vw, 250px);
-  position: absolute;
+  height: clamp(100px, 28vw, 16rem);
+  position: relative;
 }
 #white-dice {
-  transform: rotate(-30deg);
-  left: -65px;
+  transform: rotate(-25deg);
+  left: 61%;
 }
 #green-dice {
-  left: -12px;
-  top: 6px;
+  left: 35%;
+  top: 5px;
 }
 .object-fit {
   object-fit: contain;
@@ -91,13 +88,24 @@ button {
 .dice__container {
   height: 100%;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 569px) {
   #Dés {
-    top: 35%;
     left: 2%;
+    top: 35%;
   }
   #Aventures {
     z-index: 1;
+  }
+  #green-dice, #white-dice {
+    left:0;
+    top: 32%;
+  }
+  #white-dice {
+    left: 8%;
+  }
+  #green-dice {
+    top: 39%;
+    left:-18%;
   }
 }
 
@@ -105,7 +113,6 @@ button {
 #presentation {
   font-family: var(--ff-500);
   font-weight: var(--fw-600);
-
 }
 h1,h2 {
   font-family: var(--ff-600);
@@ -124,7 +131,7 @@ h1 span, h2 span {
 
 
 .home__p {
-  font-size: clamp(0.875rem, 1rem, 2.2rem);
+  font-size: clamp(1vw,1.3rem, 5vw);
 }
 .presentation__img {
   -webkit-box-shadow: 0 0 2px rgb(155, 155, 155), 0 0 7px rgb(155, 155, 155),
@@ -194,7 +201,7 @@ h1 span, h2 span {
     transform: translateY(10px);
   }
 }
-#presentation p {
+.presentation__text {
   font-size: clamp(1.5rem, 4vw, 2.2rem);
 }
 .presentation__brush-splash {
@@ -237,8 +244,4 @@ h1 span, h2 span {
 }
 .footer__link:hover::before {
   width: 100%;
-}
-
-#presentation p {
-  margin:0 ;
 }
