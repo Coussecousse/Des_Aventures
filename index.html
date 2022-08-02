@@ -18,7 +18,7 @@
     <script src="https://kit.fontawesome.com/4ba6d56c15.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
   </head>
-  <body class="vw-100 bg-black">
+  <body class="vw-100 bg-black" style="overflow-x: hidden;">
     <header class="position-fixed me-md-4 me-3" style="right: 1rem; z-index: 10;top: 1rem">
       <div class="position-relative me-md-4 mt-4" style="width: 300px">
         <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
@@ -33,7 +33,7 @@
       </div>
     </header>
     <main class="w-100">
-      <section id="home"class="vh-100 w-100 bg-black" style="width: 100vw;">
+      <section id="home"class="vh-100 w-100 bg-black">
         <div class="h-100 d-inline-flex align-items-center flex-column container-fluid">
           <div class="container position-absolute top-50 start-50 translate-middle">
             <div class="row">
@@ -59,7 +59,7 @@
           </div>
         </div>
       </section>
-      <section id="presentation w-100 overflow-hidden">
+      <section id="presentation" class="w-100">
         <h1 class="justify-content-center m-md-5 mx-2 my-5 text-center text-white"><span>Dés Aventures </span><br>c'est surtout...</h1>
         <div class="presentation__container container-fluid py-5 position-relative">
           <img src="img_modif/dice-100.png" class="position-absolute presentation__dice dice-600" style="transform: rotate(75deg);"></img>
