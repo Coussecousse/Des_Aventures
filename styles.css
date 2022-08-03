@@ -114,7 +114,7 @@ button {
   font-family: var(--ff-500);
   font-weight: var(--fw-600);
 }
-h1,h2 {
+h1,h2, h3, .pre-event__p,h4 {
   font-family: var(--ff-600);
   font-weight: 400;
 }
@@ -124,11 +124,16 @@ h1 {
 h2 {
   font-size: clamp(1.5rem, 12vw, 6rem) !important;
 }
-h1 span, h2 span {
+h1 span, h2 span, h3 span, .pre-event__p span {
   color: #2ad496 !important;
   font-weight: 700;
 }
-
+h3, .pre-event__p {
+  font-size: clamp(1.2rem, 10vw, 4rem) !important;
+}
+h4 {
+  font-size: clamp(1rem, 8vw, 3rem) ! important;
+}
 .home__p {
   font-size: clamp(1vw,1.3rem, 5vw);
 }
