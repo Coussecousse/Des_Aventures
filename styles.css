@@ -76,10 +76,10 @@ button {
 }
 #white-dice {
   transform: rotate(-25deg);
-  left: 61%;
+  left: 54%;
 }
 #green-dice {
-  left: 35%;
+  left: 27%;
   top: 5px;
 }
 .object-fit {
