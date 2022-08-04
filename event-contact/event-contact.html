@@ -29,71 +29,20 @@
     <title>Dés Aventures</title>
   </head>
   <body class="vw-100 bg-black" style="overflow-x: hidden">
-    <header
-      class="position-fixed me-5"
-      style="right: 0; z-index: 10; top: 1rem"
-    >
+    <header class="position-fixed me-3" style="right: 0; z-index: 10;top: 1rem;">
       <div class="position-relative me-md-4 mt-4" style="width: 300px">
-        <button
-          class="bg-black rounded-circle p-1 float-end m-2"
-          id="dice-menu"
-          role="navigation"
-          type="button"
-        >
-          <img
-            src="../img_modif/black_dice-min-min.webp"
-            alt="Un dé"
-            class="w-100 h-100"
-          />
-        </button>
+        <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="../img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
         <nav class="invisible" style="width: 200px; height: 200px">
-          <ul class="nav flex-column mt-2 rounded-4 fs-4 bg-black h-100 w-100">
-            <li
-              class="h-25 nav-item position-relative d-flex justify-content-center"
-            >
-              <a
-                class="nav-link link-light text-center align-self-center w-100"
-                aria-current="page"
-                href="#home"
-                >Accueil</a
-              ><span
-                class="position-absolute top-100 start-50 translate-middle"
-              ></span>
-            </li>
-            <li
-              class="h-25 nav-item position-relative d-flex justify-content-center"
-            >
-              <a
-                class="nav-link link-light text-center align-self-center w-100"
-                href="#presentation"
-                >Presentation</a
-              ><span
-                class="position-absolute top-100 start-50 translate-middle"
-              ></span>
-            </li>
-            <li
-              class="h-25 nav-item position-relative d-flex justify-content-center"
-            >
-              <a
-                class="nav-link link-light text-center align-self-center w-100"
-                href=""
-                >Évènements</a
-              ><span
-                class="position-absolute top-100 start-50 translate-middle"
-              ></span>
-            </li>
-            <li class="h-25 nav-item d-flex justify-content-center">
-              <a
-                class="nav-link link-light text-center rounded-bottom align-self-center w-100"
-                href=""
-                >Contact</a
-              >
-            </li>
+          <ul class="nav flex-column border border-light mt-2 rounded-4 fs-4 bg-black h-100 w-100">
+            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100" aria-current="page" href="#home">Accueil</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
+            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="#presentation">Presentation</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
+            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="">Évènements</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
+            <li class="h-25 nav-item d-flex justify-content-center"><a class="nav-link link-light text-center rounded-bottom align-self-center w-100"href="">Contact</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main class="w-100 text-white">
+    <main class="w-100 text-white" style="overflow-x: hidden;">
       <section
         id="pre-event"
         class="text-center d-flex flex-column justify-content-md-evenly justify-content-center gap-4 gap-md-0"
@@ -326,6 +275,45 @@
               </button>
             </div>
           </div>
+        </div>
+      </section>
+      <section id="contact" class="mt-5 w-100">
+        <div class="container">
+          <p class="contact__p fs-1 text-center col-11 mx-auto">D'abord, tu choisis ton <span>aventure </span>à la <span>date</span> qui te convient puis tu nous contactes pour réserver ta <span>place</span> !</p>
+          <form class=" col-11 mx-auto col-md-8 col-lg-5 py-4 m-5 bg-light text-black">
+            <h5 class="my-3 mb-5 text-center fs-1">Formulaire de contact</h5>
+            <div class="mb-3 col-10 mx-auto">
+              <label for="name" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="name">
+            </div>
+            <div class="mb-3 col-10 mx-auto">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email">
+            </div>
+            <div class="mb-3 col-10 mx-auto">
+              <label for="reason" class="form-label">Raison de contact</label>
+              <select class="form-select" id="reason">
+                <option value="">--Choisissez ici une raison</option>
+                <option value="" class="form__event1">19/08/2022 ** For the Queen</option>
+                <option value="" class="form__event1">19/08/2022 ** CHRONIQUES OUBLIEES : La relique Défendue</option>
+                <option value="" class="form__event1">19/08/2022 ** Donjons & Dragons 5ème édition</option>
+                <option value="" class="form__event1">19/08/2022 ** City of Mist</option>
+                <option value="" class="form__event1">19/08/2022 ** Campagne « Les Marches de L'ouest » FALLOUT - Session #1</option>
+                <option value="" class="form__event1">19/08/2022 ** CHRONIQUES OUBLIÉES : Mystère à Clairval</option>
+                <option value="" class="form__event1">19/08/2022 ** For the Crown</option>
+                <option>Autre...</option>
+              </select>
+            </div>
+            <div class="form-floating mb-3 col-10 mx-auto">
+              <textarea class="form-control" placeholder="lala" id="floatingTextarea2" style="height: 100px"></textarea>
+            </div>
+            <div class="form-check mb-3 ms-5 ps-md-4 col-10 mx-auto">
+              <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+              <label class="form-check-label" for="flexCheck">Je m'engage à prévenir l'association Dés Aventuriers en cas de retard ou de désistement.
+              </label>
+            </div>
+            <button disabled type="submit" class="btn col-5 col-lg-2 p-2 position-relative start-50 translate-middle-x" style="background: var(--color-green);">Envoyer</button>
+          </form>
         </div>
       </section>
     </main>

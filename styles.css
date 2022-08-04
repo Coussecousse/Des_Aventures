@@ -124,7 +124,7 @@ h1 {
 h2 {
   font-size: clamp(1.5rem, 12vw, 6rem) !important;
 }
-h1 span, h2 span, h3 span, .pre-event__p span {
+h1 span, h2 span, h3 span, .pre-event__p span, .contact__p span {
   color: #2ad496 !important;
   font-weight: 700;
 }
@@ -133,6 +133,9 @@ h3, .pre-event__p {
 }
 h4 {
   font-size: clamp(1rem, 8vw, 3rem) ! important;
+}
+h5 {
+  font-weight: var(--fw-600);
 }
 .home__p {
   font-size: clamp(1vw,1.3rem, 5vw);
@@ -270,4 +273,16 @@ h4 {
 .event__logo {
   margin: 0 .5rem;
   height: 45px;
+}
+.contact__p {
+  font-family: var(--ff-600);
+}
+.form-label {
+  margin-bottom: 0 !important;
+}
+input[type=text], input[type=email] {
+  background: var(--bs-light);
+  border-radius: 0;
+  border: none;
+  border-bottom: 1px solid black;
 }
