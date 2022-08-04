@@ -113,32 +113,32 @@
         <div class="container">
           <h4>Prochaines soirées :</h4>
           <div
-            class="event__container d-flex flex-column flex-md-row justify-content-md-between border gap-5 gap-md-0"
+            class="my-5 event__container d-flex flex-column flex-md-row justify-content-md-between gap-5 gap-md-0 "
           >
-            <div class="col-12 col-md-5 gap-1 d-flex flex-column">
-              <div class="event__first btn-group col-12" style="height: 50px">
+            <div class="col-12 col-md-6 col-lg-5 gap-1 d-flex flex-column">
+              <div class="event__first btn-group col-12 order-2 order-md-1">
                 <button
                   type="button"
-                  class="event__choice event__choice-active btn dropdown-toggle"
+                  class="event__choice-date event__choice-active btn dropdown-toggle"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                >19/08/2022
+                ><p class="m-0">19/08/2022</p> 
                   <img
                     src="../img/logo-event/logo-1-1.png"
                     alt=""
-                    class="h-100"
+                    class="event__logo"
                   />
                   LIVRE I
                   <img
                     src="../img/logo-event/logo-1-2.png"
                     alt=""
-                    class="h-100"
+                    class="event__logo"
                   />
                 </button>
-                <ul class="dropdown-menu p-2 col-12" style="z-index: 5">
-                  <li><button class="dropdown-item">For the Queen</button></li>
+                <ul class="event__choice-dropdown dropdown-menu p-2 col-12 flex-wrap" style="z-index: 5">
+                  <li><button class="dropdown-active dropdown-item ">For the Queen</button></li>
                   <li>
-                    <button class="dropdown-item">
+                    <button class="dropdown-item ">
                       CHRONIQUES OUBLIEES : La relique Défendue
                     </button>
                   </li>
@@ -161,26 +161,26 @@
                   <li><button class="dropdown-item">For the Crown</button></li>
                 </ul>
               </div>
-              <div class="event__second btn-group col-12" style="height: 50px">
+              <div class="event__second btn-group col-12 order-3 order-md-2">
                 <button
                   type="button"
-                  class="event__choice btn dropdown-toggle"
+                  class="event__choice-date btn dropdown-toggle"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                >02/10/2022
+                ><p class="m-0">02/10/2022</p> 
                   <img
                     src="../img/logo-event/logo-2-1.png"
                     alt=""
-                    class="h-100"
+                    class="event__logo"
                   />
                   LIVRE II
                   <img
                     src="../img/logo-event/logo-2-2.png"
                     alt=""
-                    class="h-100"
+                    class="event__logo"
                   />
                 </button>
-                <ul class="dropdown-menu p-2 col-12" style="z-index: 5">
+                <ul class="event__choice-dropdown dropdown-menu p-2 col-12" style="z-index: 5">
                   <li>
                     <button class="dropdown-item">
                       ONIRIS- "Un Bruit Au Fond Du Trou"
@@ -204,27 +204,27 @@
                   </li>
                 </ul>
               </div>
-              <div class="event__third btn-group col-12" style="height: 50px">
+              <div class="event__third btn-group col-12 order-4 order-md-3">
                 <button
                   type="button"
-                  class="event__choice btn dropdown-toggle"
+                  class="event__choice-date btn dropdown-toggle"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                >02/10/2022
+                ><p class="m-0">02/10/2022</p>
 
                   <img
                     src="../img/logo-event/logo-3-1.png"
                     alt=""
-                    class="h-100"
+                    class="event__logo"
                   />
                   LIVRE III
                   <img
                     src="../img/logo-event/logo-3-2.png"
                     alt=""
-                    class="h-100"
+                    class="event__logo"
                   />
                 </button>
-                <ul class="dropdown-menu p-2 col-12" style="z-index: 5">
+                <ul class="event__choice-dropdown dropdown-menu p-2 col-12" style="z-index: 5">
                   <li><button class="dropdown-item">Hogward</button></li>
                   <li><button class="dropdown-item">Alien</button></li>
                   <li>
@@ -246,6 +246,7 @@
                   <li><button class="dropdown-item">Face au Titan</button></li>
                 </ul>
               </div>
+              <img src="../img/gif.gif" alt="" class="order-1 order-md-4">
             </div>
             <div
               id="carouselExampleControls"
@@ -255,9 +256,9 @@
               <div class="carousel-inner text-dark h-100">
                 <div class="carousel-item active w-100 h-100">
                   <div
-                    class="h-100 p-3 d-flex flex-column justify-content-evenly"
+                    class="h-100 p-3 d-flex flex-column justify-content-between"
                   >
-                    <div class="text-center">
+                    <div class="text-center mt-5">
                       <h5 class="fs-1">FOR THE QUEEN</h5>
                       <p>19/08/2022</p>
                     </div>
@@ -325,13 +326,6 @@
               </button>
             </div>
           </div>
-          <!-- <div class="event__show col-12 col-md-6 border" style="height:500px">
-                      <div class="bg-light w-100 h-100"></div>
-                  </div> -->
-          <!-- <div class="event__first"></div>
-                <div class="event__show"></div>
-                <div class="event__first"></div>
-                <div class="event__show"></div> -->
         </div>
       </section>
     </main>

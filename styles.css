@@ -250,11 +250,24 @@ h4 {
   width: 100%;
 }
 
-.event__choice {
+.event__choice-date, .event__choice-dropdown {
   background-color: var(--bs-gray-800) !important;
   color: white !important;
 }
+.event__choice-date:hover, .dropdown-item:hover {
+  background: var(--bs-gray-700) !important;
+}
+
+.dropdown-item {
+  color:white !important;
+}
 .event__choice-active {
-  color:#2ad496 !important;
   border: #2ad496 solid 1px !important ;
+}
+.event__choice-active, .dropdown-active {
+  color:#2ad496 !important;
+}
+.event__logo {
+  margin: 0 .5rem;
+  height: 45px;
 }
