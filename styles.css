@@ -280,9 +280,26 @@ h5 {
 .form-label {
   margin-bottom: 0 !important;
 }
+
 input[type=text], input[type=email] {
   background: var(--bs-light);
   border-radius: 0;
   border: none;
+}
+input[type=text], input[type=email] {
   border-bottom: 1px solid black;
+}
+#floatingTextarea {
+  border-radius: 10px;
+  border: 1px solid black;
+}
+#reason {
+  background-color: var(--bs-light);
+  border: none;
+  border-radius: 0;
+  border-bottom: 1px solid black;
+}
+.form-check-input:checked{
+  background-color: #2ad496 !important;
+  border-color : #2ad496 !important;
 }
