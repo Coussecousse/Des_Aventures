@@ -303,3 +303,16 @@ input[type=text], input[type=email] {
   background-color: #2ad496 !important;
   border-color : #2ad496 !important;
 }
+.contact__letter {
+  transform-style: preserve-3d !important;
+  transition: .5s ease-in;
+}
+
+#contact__letter-up:hover  {
+  transform: translateY(-100%) rotateX(180deg) !important;
+
+}
+
+#contact__letter-down:hover {
+  transform: translateY(100%) rotateX(-180deg) !important;
+}

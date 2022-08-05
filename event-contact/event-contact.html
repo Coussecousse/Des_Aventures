@@ -281,11 +281,11 @@
         <div class="container">
           <p class="contact__p fs-1 text-center col-11 mx-auto">D'abord, tu choisis ton <span>aventure </span>à la <span>date</span> qui te convient puis tu nous contactes pour réserver ta <span>place</span> !</p>
           <div class="col-11 mx-auto col-md-8 col-lg-5 m-5 bg-light text-black position-relative">
-            <div class="contact__letter-up position-absolute h-50 border-bottom border-secondary col-12 m-0 p-0 bg-light" style="z-index: 6;">
+            <div id="contact__letter-up" class="contact__letter position-absolute h-50 border-bottom border-secondary col-12 m-0 p-0 bg-light" style="z-index: 6;">
               <h5 class="my-5 text-center fs-1">Formulaire de contact</h5>
-              <button class="letter-open bg-danger rounded-5 position-absolute start-50 translate-middle-x" style="width: 50px;height: 50px; bottom: -10%;"></button>
+              <button class="letter-open position-absolute start-50 translate-middle-x bg-transparent" style="bottom: -20%;"><img src="../img_modif/stamp.png" alt="" style="height: 100px"></button>
             </div>
-            <div class="contact__letter-down position-absolute h-50 col-12 m-0 p-0 bottom-0 bg-light" style="z-index: 5;"></div>
+            <div id="contact__letter-down" class="contact__letter position-absolute h-50 col-12 m-0 p-0 bottom-0 bg-light" style="z-index: 5;"></div>
             <form class=" col-12 py-4">
               <div class="mb-3 col-10 mx-auto">
                 <label for="name" class="form-label">Nom :</label>
