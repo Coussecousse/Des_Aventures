@@ -19,10 +19,10 @@
     <script src="../script.js"></script>
   </head>
   <body class="vw-100 bg-black" style="overflow-x: hidden;">
-    <header class="position-fixed me-5" style="right: 0; z-index: 10;top: 1rem;">
-      <div class="position-relative me-md-4 mt-4" style="width: 300px">
+    <header class="position-fixed me-3" style="right: 0; z-index: 10;top: 1rem;">
+      <div class="me-md-4 mt-4" style="width: 300px">
         <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="../img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
-        <nav class="invisible" style="width: 200px; height: 200px">
+        <nav class="visible" style="width: 200px; height: 200px">
           <ul class="nav flex-column border border-light mt-2 rounded-4 fs-4 bg-black h-100 w-100">
             <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100" aria-current="page" href="#home">Accueil</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
             <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="#presentation">Presentation</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
@@ -32,18 +32,18 @@
         </nav>
       </div>
     </header>
-    <main class="w-100" style="overflow-x: hidden;">
+    <main class="w-100"style="overflow-x:hidden;">
       <section id="home"class="vh-100 w-100 bg-black d-flex flex-column">
-        <div class="d-inline-flex align-items-center justify-content-center flex-column container-fluid" style="height: 95%;">
+        <div class="d-flex flex-column align-items-center justify-content-center  container-fluid" style="height: 95%;">
           <div class="container">
             <div class="row">
-              <div class="order-0 col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end align-content-sm-end">
-                <img src="../img_modif/Dés-min.webp" alt="Dés" class="object-fit" id="Dés">
+              <div class="d-flex justify-content-center justify-content-sm-end align-content-sm-end order-0 col-12 col-sm-6 ">
+                <img src="../img_modif/Dés-min.webp" alt="Dés" id="Dés">
               </div>
-              <div class="order-1 order-sm-2 col-12 d-flex justify-content-center">
-                <img src="../img_modif/aventures-min.webp" alt="Aventures" class="object-fit" id="Aventures">
+              <div class="d-flex justify-content-center col-12 order-1 order-sm-2 ">
+                <img src="../img_modif/aventures-min.webp" alt="Aventures" id="Aventures">
               </div>
-              <div class="dice__container d-flex order-2 order-sm-1 col-12 col-sm-6 mx-auto align-self-end justify-content-start">
+              <div class="d-flex align-self-end justify-content-start col-12 col-sm-6 mx-auto order-2 order-sm-1">
                 <div class="d-sm-flex align-items-start justify-content-start">
                   <img src="../img_modif/white_dice-min.webp" alt="Dé blanc" id="white-dice">
                   <img src="../img_modif/green_dice-min.webp" alt="Dé vert" id="green-dice">
@@ -62,16 +62,16 @@
       <section id="presentation" class="w-100">
         <h1 class="justify-content-center m-md-5 mx-2 my-5 text-center text-white"><span>Dés Aventures </span><br>c'est surtout...</h1>
         <div class="presentation__container container-fluid py-5 position-relative">
-          <img src="../img_modif/dice-100.png" class="position-absolute presentation__dice dice-600" style="transform: rotate(75deg);"></img>
-          <img src="../img_modif/dice-8-2.png"class="position-absolute presentation__dice dice-500" style="top: 10%;left: 88vw;"></img>
-          <img src="../img_modif/dice-12.png" class="position-absolute presentation__dice dice-400" style="top: 20%;left: 10vw;transform:rotate(-30deg)"></img>
-          <img src="../img_modif/dice-4.png" class="position-absolute presentation__dice dice-500" style="top: 10%;left: 38vw;transform:rotate(15deg)"></img>
-          <img src="../img_modif/dice-6.png" class="position-absolute presentation__dice dice-400" style="top: 80%;left: 88vw;transform:rotate(-15deg)"></img>
-          <img src="../img_modif/dice-8.png" class="position-absolute presentation__dice dice-600" style="top: 40%;left: 76vw;transform:rotate(0deg)"></img>
-          <img src="../img_modif/dice-20.png" class="position-absolute presentation__dice dice-500" style="top: 58%;left: 55vw;transform:rotate(0deg)"></img>
-          <img src="../img_modif/dice-8-2.png"class="position-absolute presentation__dice dice-400" style="top: 50%;left: 0vw;transform:rotate(110deg)"></img>
-          <img src="../img_modif/dice-100.png"class="position-absolute presentation__dice dice-400" style="top: 70%;left: 30vw;transform:rotate(20deg)"></img>
-          <img src="../img_modif/dice-4.png" class="position-absolute presentation__dice dice-600" style="top: 80%;left: 0vw;transform:rotate(-30deg)"></img>
+          <img src="../img_modif/dice-100.png" class="icon-bg dice-600" style="transform: rotate(75deg);"></img>
+          <img src="../img_modif/dice-8-2.png"class="icon-bg dice-500" style="top: 10%;left: 88vw;"></img>
+          <img src="../img_modif/dice-12.png" class="icon-bg dice-400" style="top: 20%;left: 10vw;transform:rotate(-30deg)"></img>
+          <img src="../img_modif/dice-4.png" class="icon-bg dice-500" style="top: 10%;left: 38vw;transform:rotate(15deg)"></img>
+          <img src="../img_modif/dice-6.png" class="icon-bg dice-400" style="top: 80%;left: 88vw;transform:rotate(-15deg)"></img>
+          <img src="../img_modif/dice-8.png" class="icon-bg dice-600" style="top: 40%;left: 76vw;transform:rotate(0deg)"></img>
+          <img src="../img_modif/dice-20.png" class="icon-bg dice-500" style="top: 58%;left: 55vw;transform:rotate(0deg)"></img>
+          <img src="../img_modif/dice-8-2.png"class="icon-bg dice-400" style="top: 50%;left: 0vw;transform:rotate(110deg)"></img>
+          <img src="../img_modif/dice-100.png"class="icon-bg dice-400" style="top: 70%;left: 30vw;transform:rotate(20deg)"></img>
+          <img src="../img_modif/dice-4.png" class="icon-bg dice-600" style="top: 80%;left: 0vw;transform:rotate(-30deg)"></img>
           <div class="row text-center text-white my-md-5 my-2 py-5 col-12 col-md-11 mx-auto position-relative gap-5">
             <img src="../img/img1.jpg" alt="Groupe de personnes assis à une table jouant à un jeu de rôle en s'aidant d'un écran" class="presentation__img col-11 col-md-6 order-md-1 mx-auto ms-md-auto">
             <img src="../img_modif/knight-on-horse-clipart-black-and-white-clip-art-images-619365.png" id = "knight" alt="Logo d'un chevalier" class="presentation__icon position-absolute bottom-0" style="left:10%; top:55%">
