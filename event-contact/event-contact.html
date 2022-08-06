@@ -28,12 +28,12 @@
     <script src="../script.js"></script>
     <title>Dés Aventures</title>
   </head>
-  <body class="vw-100 bg-black" style="overflow-x: hidden">
-    <header class="position-fixed me-3" style="right: 0; z-index: 10;top: 1rem;">
-      <div class="position-relative me-md-4 mt-4" style="width: 300px">
-        <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="../img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
-        <nav class="invisible" style="width: 200px; height: 200px">
-          <ul class="nav flex-column border border-light mt-2 rounded-4 fs-4 bg-black h-100 w-100">
+  <body class="vw-100 bg-black" style="overflow-x: hidden !important">
+      <header class="position-fixed me-3" style="right: 0; z-index: 10;top: 1rem;">
+        <div class="position-relative me-md-4 mt-4" style="width: 300px">
+          <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="../img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
+          <nav class="invisible" style="width: 200px; height: 200px">
+            <ul class="nav flex-column border border-light mt-2 rounded-4 fs-4 bg-black h-100 w-100">
             <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100" aria-current="page" href="#home">Accueil</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
             <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="#presentation">Presentation</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
             <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="">Évènements</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
@@ -42,27 +42,38 @@
         </nav>
       </div>
     </header>
-    <main class="w-100 text-white" style="overflow-x: hidden;">
+    <main class="w-100 text-white position-relative" style="overflow-x: hidden;" id="contact-event">
+      <img src="../img_modif/dice-100.png" class="position-absolute presentation__dice dice-600" style="transform: rotate(75deg);"></img>
+      <img src="../img_modif/dice-20.png"class="position-absolute presentation__dice dice-500" style="top: 8%;left: 88vw;"></img>
+      <img src="../img_modif/dice-12.png" class="position-absolute presentation__dice dice-400" style="top: 35%;left: 90vw;transform:rotate(-30deg)"></img>
+      <img src="../img_modif/dice-4.png" class="position-absolute presentation__dice dice-500" style="top: 22%;left: 2vw;transform:rotate(15deg)"></img>
+      <img src="../img_modif/dice-20.png" class="position-absolute presentation__dice dice-400" style="top: 80%;left: 18vw;transform:rotate(55deg)"></img>
+      <img src="../img_modif/dice-8.png" class="position-absolute presentation__dice dice-600" style="top: 55%;left: 92vw;transform:rotate(0deg)"></img>
+      <img src="../img_modif/dice-6.png" class="position-absolute presentation__dice dice-400" style="top: 30%;left: 70vw;transform:rotate(0deg)"></img>
+      <img src="../img_modif/dice-8-2.png"class="position-absolute presentation__dice dice-400" style="top: 45%;left: 0vw;transform:rotate(110deg)"></img>
+      <img src="../img_modif/dice-4.png" class="position-absolute presentation__dice dice-600" style="top: 70%;left: 0vw;transform:rotate(-30deg)"></img>
+      <img src="../img_modif/dice-6.png" class="position-absolute presentation__dice dice-600" style="top: 75%;left: 70vw;transform:rotate(-15deg)"></img>
+      <img src="../img_modif/sorcerer-event.png" class="position-absolute presentation__dice contact__icon" alt="" style="top: 5%; left: 72vw">
+      <img src="../img_modif/orc-event.png" class="position-absolute presentation__dice contact__icon" alt="" style="top: 55%;">
+      <img src="../img_modif/male-event.png" class="position-absolute presentation__dice contact__icon" alt="" style="bottom: 0;left: 90vw">
+      <img src="../img_modif/archer-event.png" class="position-absolute presentation__dice contact__icon" alt="" style="bottom: 0;left: 3vw">
       <section
         id="pre-event"
-        class="text-center d-flex flex-column justify-content-md-evenly justify-content-center gap-4 gap-md-0"
-        style="height: 80vh"
+        class="pre-event__text text-center d-flex flex-column justify-content-md-evenly justify-content-center gap-4 mb-5 my-5"
       >
-        <div>
-          <img
-            src="../img/274525114_126861136527721_6283587950641699820_n.jpg"
-            alt=""
-            class="col-11 mx-auto col-md-6 col-lg-4"
-          />
-        </div>
-        <h3 class="">Envie d'embarquer dans notre <span>univers </span> ?</h3>
+        <img
+          src="../img/Dés_aventures.png"
+          alt=""
+          class="col-11 col-12 mx-auto col-md-6 col-lg-4 mt-5 pt-5 mb-3 pt-md-0"
+        />
+        <h3 class="col-11 mx-auto">Envie d'embarquer dans notre <span>univers </span> ?</h3>
         <p class="pre-event__p">Alors <span>c'est parti !</span></p>
       </section>
       <section id="event">
         <div class="container">
-          <h4>Prochaines soirées :</h4>
+          <h4 class="ps-3">Prochaines soirées :</h4>
           <div
-            class="my-5 event__container d-flex flex-column flex-md-row justify-content-md-between gap-5 gap-md-0 "
+            class="my-4 event__container d-flex flex-column flex-md-row justify-content-md-between gap-5 gap-md-0 "
           >
             <div class="col-12 col-md-6 col-lg-5 gap-1 d-flex flex-column">
               <div class="event__first btn-group col-12 order-2 order-md-1">

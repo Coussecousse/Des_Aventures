@@ -129,10 +129,10 @@ h1 span, h2 span, h3 span, .pre-event__p span, .contact__p span {
   font-weight: 700;
 }
 h3, .pre-event__p {
-  font-size: clamp(1.2rem, 10vw, 4rem) !important;
+  font-size: clamp(1.2rem, 8vw, 3.5rem) !important;
 }
 h4 {
-  font-size: clamp(1rem, 8vw, 3rem) ! important;
+  font-size: clamp(1rem, 8vw, 2.5rem) ! important;
 }
 h5 {
   font-weight: var(--fw-600);
@@ -315,4 +315,16 @@ input[type=text], input[type=email] {
 
 #contact__letter-down:hover {
   transform: translateY(100%) rotateX(-180deg) !important;
+}
+.contact__icon {
+  height: clamp(80px, 15vw, 250px); 
+}
+
+@media screen and (max-width:568px) {
+  #contact-event .presentation__dice {
+    visibility: hidden;
+  }
+  .icon-special {
+    visibility: visible;
+  }
 }
