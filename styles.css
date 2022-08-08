@@ -14,16 +14,16 @@
   --fs-h1 : clamp(2rem, 14vw,7rem);
   --fs-h2 : clamp(1.5rem, 12vw, 6rem);
   --fs-h3 : clamp(1.2rem, 8vw, 3.5rem);
+  --fs-h4 : clamp(1rem, 8vw, 2.5rem);
   --fs-p-home : clamp(1vw,1.3rem, 5vw);
-  --fs-p-presentation : clamp(1.5rem, 4vw, 2.2rem);
+  --fs-p-presentation : clamp(1.3rem, 4vw, 1.8rem);
 
-
-  --width-menu: 70px;
-
+  --size-menu: 70px;
+  
   --h-Dés : clamp(70px, 22vw, 13rem);
   --h-Aventures : clamp(50px, 20vw, 12rem);
   --h-primary-dice : clamp(100px, 28vw, 16rem);
-  --h-icon-presentation : clamp(80px, 15vw, 250px);
+  --h-icon : clamp(80px, 15vw, 250px);
   --h-logo : 45px;
   
   --w-brush : clamp(380px, 80vw, 700px);
@@ -40,29 +40,29 @@
   --dice-500 : clamp(80px, 15vw, 150px);
   --dice-600 : clamp(100px, 20vw, 200px);
 
-
-/* _____________ */
+/* ______DEKSTOP_______ */
 
   --t-Dés-max : 35%;
   --t-wDice-max : 32%;
   --t-gDice-max : 39%;
+  --t-brush-first-max : ;
 
   --left-Dés-max : 2%;
   --left-wDice-max : 8%;
   --left-gDice-max : -18%;
 
-  --left-knight : 50%; 
+  --left-knight-max : 50%; 
 }
 
 /* GENERAL */
 
 * {
   margin:0 ;
-  padding: 0 !important;
+  padding: 0;
   box-sizing: border-box;
 }
 body {
-  font-family: var(--ff) !important;
+  font-family: var(--ff);
   font-size: var(--fs-500);
 }
 /* BOUTON MENU & MENU */
@@ -70,8 +70,8 @@ header li {
   cursor: pointer;
 }
 #dice-menu {
-  height: var(--width-menu);
-  width: var(--width-menu);
+  height: var(--size-menu);
+  width: var(--size-menu);
 }
 
 .nav-item > span {
@@ -147,20 +147,20 @@ h1,h2, h3, .pre-event__p,h4 {
   font-weight: var(--fw-400);
 }
 h1 {
-  font-size: var(--fs-h1) !important;
+  font-size: var(--fs-h1);
 }
 h2 {
-  font-size: clamp(1.5rem, 12vw, 6rem) !important;
+  font-size: clamp(1.5rem, 12vw, 6rem);
 }
 h3, .pre-event__p {
-  font-size: var(--fs-h3) !important;
+  font-size: var(--fs-h3);
 }
 h1 span, h2 span, h3 span, .pre-event__p span, .contact__p span {
-  color: var(--color-green) !important;
+  color: var(--color-green);
   font-weight: var(--fw-600);
 }
 h4 {
-  font-size: clamp(1rem, 8vw, 2.5rem) ! important;
+  font-size: var(--fs-h4);
 }
 h5 {
   font-weight: var(--fw-500);
@@ -186,8 +186,8 @@ h5 {
   }
 }
 .presentation__icon {
-  height: var(--h-icon-presentation); 
-  width: auto !important;
+  height: var(--h-icon); 
+  width: auto;
   z-index: 2;
 }
 .dice-500 {
@@ -233,7 +233,7 @@ h5 {
 }
 @media screen and (min-width:768px) {
     #knight {
-      left:var(--left-knight) !important;
+      left:var(--left-knight-max) !important;
     }
 }
 @media screen and (min-width: 768px){
@@ -302,25 +302,28 @@ input[type=text], input[type=email] {
   border-radius: 0;
   border-bottom: 1px solid black;
 }
+
+.form__event:hover {
+  background-color: var(--color-green) ;
+}
 .form-check-input:checked{
-  background-color: #2ad496 !important;
-  border-color : #2ad496 !important;
+  background-color: #2ad496;
+  border-color : #2ad496;
 }
 .contact__letter {
-  transform-style: preserve-3d !important;
+  transform-style: preserve-3d;
   transition: .5s ease-in;
 }
 
 #contact__letter-up:hover  {
-  transform: translateY(-100%) rotateX(180deg) !important;
-
+  transform: translateY(-100%) rotateX(180deg);
 }
 
 #contact__letter-down:hover {
-  transform: translateY(100%) rotateX(-180deg) !important;
+  transform: translateY(100%) rotateX(-180deg);
 }
 .contact__icon {
-  height: clamp(80px, 15vw, 250px); 
+  height: var(--h-icon); 
 }
 
 @media screen and (max-width:568px) {
