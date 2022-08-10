@@ -119,24 +119,6 @@ button {
   top: var(--t-gDice);
 }
 
-@media screen and (min-width: 569px) {
-  #Dés {
-    left: var(--left-Dés-max);
-    top: var(--t-Dés-max);
-  }
-  #Aventures {
-    z-index: 1;
-  }
-  #white-dice {
-    left: var(--left-wDice-max);
-    top: var(--t-wDice-max);
-  }
-  #green-dice {
-    top: var(--t-gDice-max);
-    left: var(--left-gDice-max);
-  }
-}
-
 /* STYLE PRESENTATION */
 #presentation {
   font-family: var(--ff-500);
@@ -204,6 +186,7 @@ h5 {
 }
 
 .icon-bg {
+  visibility: hidden;
   position: absolute;
   z-index: -3;
 }
@@ -231,17 +214,7 @@ h5 {
   object-fit: contain;
   z-index: -2;
 }
-@media screen and (min-width:768px) {
-    #knight {
-      left:var(--left-knight-max) !important;
-    }
-}
-@media screen and (min-width: 768px){
-  .footer__line {
-    transform: rotate(-90deg) translate(-50%);
-  }
 
-}
 .footer__link::after, .footer__link::before {
   content:'';
   width: 0;
@@ -326,9 +299,35 @@ input[type=text], input[type=email] {
   height: var(--h-icon); 
 }
 
-@media screen and (max-width:767px) {
-  #contact-event .icon-bg {
-    visibility: hidden;
+/* ______________MEDIA SCREEN */
+
+
+@media screen and (min-width: 569px) {
+  #Dés {
+    left: var(--left-Dés-max);
+    top: var(--t-Dés-max);
   }
-  
+  #Aventures {
+    z-index: 1;
+  }
+  #white-dice {
+    left: var(--left-wDice-max);
+    top: var(--t-wDice-max);
+  }
+  #green-dice {
+    top: var(--t-gDice-max);
+    left: var(--left-gDice-max);
+  }
+}
+
+@media screen and (min-width:768px) {
+  #contact-event .icon-bg {
+    visibility: visible;
+  }
+  #knight {
+    left:var(--left-knight-max) !important;
+  }
+  .footer__line {
+    transform: rotate(-90deg) translate(-50%);
+  }
 }
