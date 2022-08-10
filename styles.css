@@ -198,7 +198,6 @@ h5 {
 }
 
 .icon-bg {
-  visibility: hidden;
   position: absolute;
   z-index: -3;
 }
@@ -312,7 +311,11 @@ input[type=text], input[type=email] {
 }
 
 /* ______________MEDIA SCREEN */
-
+@media screen and (max-width:767px) {
+  #contact-event .icon-bg {
+    visibility: hidden;
+  }
+}
 
 @media screen and (min-width: 569px) {
   #Dés {
