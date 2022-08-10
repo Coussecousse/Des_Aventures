@@ -18,21 +18,26 @@
     <script src="../script.js"></script>
     <link rel="stylesheet" href="../styles.css" />
   </head>
-  <body class="vw-100 bg-black" style="overflow-x: hidden;">
-    <header class="position-fixed me-3" style="right: 0; z-index: 10;top: 1rem;">
-      <div class="me-md-4 mt-4" style="width: 300px">
-        <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="../img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
-        <nav class="visible" style="width: 200px; height: 200px">
-          <ul class="nav flex-column border border-light mt-2 rounded-4 fs-4 bg-black h-100 w-100">
-            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100" aria-current="page" href="#home">Accueil</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
-            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="#presentation">Presentation</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
-            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="">Évènements</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
-            <li class="h-25 nav-item d-flex justify-content-center"><a class="nav-link link-light text-center rounded-bottom align-self-center w-100"href="">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
+  <body class="vw-100 bg-black d-flex" style="overflow-x: hidden;">
+    <header class="position-fixed d-flex
+     justify-content-center align-content-end" style="width: 20%; height: fit-content; z-index: 10;">
+      <button class="mt-4 d-flex rounded-3 bg-dark" style="height: fit-content;z-index: 10;">
+        <p id="p-menu" class="text-align-center my-2 ms-2 text-light align-self-center">MENU</p>
+        <img src="./img_modif/black_dice-min-min.png" alt="Dé menu blanc" id="dice-button" class="p-1" style="">
+      </button>
     </header>
-    <main class="w-100"style="overflow-x:hidden;">
+    <div class="d-flex justify-content-center bg-dark" id="nav" style="right: 0%; width: 100%; height: 100vh; z-index: 9">
+      <nav class="fs-5 text-center my-auto w-100">
+        <ul class="nav flex-column">
+          <li class="py-2 nav-item position-relative"><a class="nav-link link-light" href="#home">Accueil<span class="position-absolute top-100 start-50 translate-middle"></span></a></li>
+          <li class="py-2 nav-item position-relative"><a class="nav-link link-light" href="#presentation">Présentation<span class="position-absolute top-100 start-50 translate-middle"></span></a></li>
+          <li class="py-2 nav-item position-relative"><a class="nav-link link-light" href="">Soirées<span class="position-absolute top-100 start-50 translate-middle"></span></a></li>
+          <li class="py-2 nav-item position-relative"><a class="nav-link link-light" href="">Contact<span class="position-absolute top-100 start-50 translate-middle"></span></a></li>
+          <li class="py-4 nav-item position-relative"><a class="nav-link link-light" href="" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+    <main style="overflow-x:hidden; width: 100%">
       <section id="home"class="vh-100 w-100 bg-black d-flex flex-column">
         <div class="d-flex flex-column align-items-center justify-content-center  container-fluid" style="height: 95%;">
           <div class="container">
@@ -50,7 +55,7 @@
                 </div>
               </div>
             </div>
-            <div class="home__p text-white mt-5 text-center col-12 col-sm-8 col-lg-6 mx-auto pt-md-5 px-3 " style="height: 5%;">
+            <div class="home__p text-white mt-4 text-center col-12 col-sm-8 col-lg-6 mx-auto px-3 " style="height: 5%;">
               <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tellus urna, facilisis sit amet dignissim condimentum, condimentum ac lectus. Donec.</p>
             </div>
           </div>
@@ -143,17 +148,17 @@
           <img src="../img_modif\grass2.png" alt="" class="position-absolute w-100 w-md-auto h-md-50" style="z-index: -3;bottom:0;">
         </div>
       </section>
+      <footer class="d-flex justify-content-center gap-md-5 flex-column flex-md-row border-top border-light">
+        <div class="my-3 d-flex justify-content-center" style="height: 110px;">
+          <img src="../img/Dés_aventures.png" alt="Logo Dés Aventures" class="mx-auto" style="height: 100%;">
+        </div>
+        <div class="mt-3 footer__line border mx-auto mx-md-0" style="height: 90%; width: 90px"></div>
+        <div class="my-3 me-md-0 d-flex justify-content-evenly justify-content-md-between align-self-center" style="height: fit-content;width: 300px">
+          <a class="footer__link text-decoration-none text-white fs-5" href="./event-contact.html" style="transition: .5s;">Évènements & Contact</a>
+          <a class="text-decoration-none text-white" href="https://www.facebook.com/desaventures" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
+        </div>
+      </footer>
     </main>
-    <footer class="d-flex justify-content-center gap-md-5 flex-column flex-md-row border-top border-light">
-      <div class="my-3 d-flex justify-content-center" style="height: 110px;">
-        <img src="../img/Dés_aventures.png" alt="Logo Dés Aventures" class="mx-auto" style="height: 100%;">
-      </div>
-      <div class="mt-3 footer__line border mx-auto mx-md-0" style="height: 90%; width: 90px"></div>
-      <div class="my-3 me-md-0 d-flex justify-content-evenly justify-content-md-between align-self-center" style="height: fit-content;width: 300px">
-        <a class="footer__link text-decoration-none text-white fs-5" href="./event-contact.html" style="transition: .5s;">Évènements & Contact</a>
-        <a class="text-decoration-none text-white" href="https://www.facebook.com/desaventures" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
-      </div>
-    </footer>
     <script src="../bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>
