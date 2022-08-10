@@ -326,11 +326,9 @@ input[type=text], input[type=email] {
   height: var(--h-icon); 
 }
 
-@media screen and (max-width:568px) {
-  #contact-event .presentation__dice {
+@media screen and (max-width:767px) {
+  #contact-event .icon-bg {
     visibility: hidden;
   }
-  .icon-special {
-    visibility: visible;
-  }
+  
 }
