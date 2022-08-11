@@ -85,7 +85,7 @@ header {
   font-weight: var(--fw-600);
   letter-spacing: .5rem;
 }
-#nav {
+#nav-down {
   position: absolute;
   width: 100%;
   transform: translateY(-100%);
@@ -349,7 +349,7 @@ input[type=text], input[type=email] {
     right: 0%;
     transform: translateX(0);
   }
-  #nav {
+  #nav-down {
     width: 21%;
   }
 }
@@ -358,8 +358,7 @@ input[type=text], input[type=email] {
   header {
     width: 15%;
   }
-  
-  #nav {
+  #nav-down {
     width: 15%;
   }
 }

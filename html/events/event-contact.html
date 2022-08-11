@@ -12,7 +12,7 @@
     />
     <link
       rel="stylesheet"
-      href="./bootstrap-5.2.0-dist/css/bootstrap.min.css"
+      href="../../bootstrap-5.2.0-dist/css/bootstrap.min.css"
       />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -24,45 +24,50 @@
       src="https://kit.fontawesome.com/4ba6d56c15.js"
       crossorigin="anonymous"
       ></script>
-    <script src="../script.js"></script>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
     <title>Dés Aventures</title>
   </head>
-  <body class="vw-100 bg-black" style="overflow-x: hidden !important">
-      <header class="position-fixed me-3" style="right: 0; z-index: 10;top: 1rem;">
-        <div class="position-relative me-md-4 mt-4" style="width: 300px">
-          <button class="bg-black rounded-circle p-1 float-end border border-light border-2 m-2" id="dice-menu" role="navigation" type="button"><img src="../img_modif/black_dice-min-min.webp" alt="Un dé" class="w-100 h-100"></button>
-          <nav class="visible" style="width: 200px; height: 200px">
-            <ul class="nav flex-column border border-light mt-2 rounded-4 fs-4 bg-black h-100 w-100">
-            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100" aria-current="page" href="#home">Accueil</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
-            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="#presentation">Presentation</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
-            <li class="h-25 nav-item position-relative d-flex justify-content-center"><a class="nav-link link-light text-center align-self-center w-100"href="">Évènements</a><span class="position-absolute top-100 start-50 translate-middle"></span></li>
-            <li class="h-25 nav-item d-flex justify-content-center"><a class="nav-link link-light text-center rounded-bottom align-self-center w-100"href="">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+  <body id="body-events" class="vw-100 bg-black" style="overflow-x: hidden !important">
+    <header></header>
+    <!-- <header class="position-fixed d-flex
+    justify-content-center align-content-end" style="width: 20%; height: fit-content; z-index: 10;">
+     <button class="button-nav mt-4 d-flex rounded-3 bg-dark" style="height: fit-content;z-index: 10;">
+       <p id="p-menu" class="text-align-center my-2 ms-2 text-light align-self-center">MENU</p>
+       <img src="../../img_modif/black_dice-min-min.png" alt="Dé menu blanc" id="dice-button" class="p-1">
+     </button>
+   </header>
+   <div class="nav-down d-flex justify-content-center bg-dark" id="nav-down" style="right: 0%; height: 100vh; z-index: 9">
+     <nav class="fs-5 text-center my-auto w-100">
+       <ul class="nav flex-column">
+         <li class="py-2 nav-item position-relative"><a class="nav-link link-light" href="#home">Accueil<span class="position-absolute top-100 start-50 translate-middle"></span></a></li>
+         <li class="py-2 nav-item position-relative"><a class="nav-link link-light" href="#presentation">Présentation<span class="position-absolute top-100 start-50 translate-middle"></span></a></li>
+         <li class="py-2 nav-item position-relative"><a class="nav-link link-light" href="">Soirées<span class="position-absolute top-100 start-50 translate-middle"></span></a></li>
+         <li class="py-2 nav-item position-relative"><a class="nav-link link-light" href="">Contact<span class="position-absolute top-100 start-50 translate-middle"></span></a></li>
+         <li class="py-4 nav-item position-relative"><a class="nav-link link-light" href="" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a></li>
+       </ul>
+     </nav>
+   </div> -->
     <main class="w-100 text-white position-relative" style="overflow-x: hidden;" id="contact-event">
-      <img src="../img_modif/dice-100.png" class="icon-bg dice-600" style="transform: rotate(75deg);"></img>
-      <img src="../img_modif/dice-20.png"class="icon-bg dice-500" style="top: 8%;left: 88vw;"></img>
-      <img src="../img_modif/dice-12.png" class="icon-bg dice-400" style="top: 35%;left: 90vw;transform:rotate(-30deg)"></img>
-      <img src="../img_modif/dice-4.png" class="icon-bg dice-500" style="top: 22%;left: 2vw;transform:rotate(15deg)"></img>
-      <img src="../img_modif/dice-20.png" class="icon-bg dice-400" style="top: 80%;left: 18vw;transform:rotate(55deg)"></img>
-      <img src="../img_modif/dice-8.png" class="icon-bg dice-600" style="top: 55%;left: 92vw;transform:rotate(0deg)"></img>
-      <img src="../img_modif/dice-6.png" class="icon-bg dice-400" style="top: 30%;left: 70vw;transform:rotate(0deg)"></img>
-      <img src="../img_modif/dice-8-2.png"class="icon-bg dice-400" style="top: 45%;left: 0vw;transform:rotate(110deg)"></img>
-      <img src="../img_modif/dice-4.png" class="icon-bg dice-600" style="top: 70%;left: 0vw;transform:rotate(-30deg)"></img>
-      <img src="../img_modif/dice-6.png" class="icon-bg dice-600" style="top: 75%;left: 70vw;transform:rotate(-15deg)"></img>
-      <img src="../img_modif/sorcerer-event.png" class="icon-bg contact__icon" alt="" style="top: 5%; left: 72vw">
-      <img src="../img_modif/orc-event.png" class="icon-bg contact__icon" alt="" style="top: 55%;">
-      <img src="../img_modif/male-event.png" class="icon-bg contact__icon special-icon" alt="" style="bottom: 0;left: 90vw">
-      <img src="../img_modif/archer-event.png" class="icon-bg contact__icon special-icon" alt="" style="bottom: 0;left: 3vw">
+      <img src="../../img_modif/dice-100.png" class="icon-bg dice-600" style="transform: rotate(75deg);"></img>
+      <img src="../../img_modif/dice-20.png"class="icon-bg dice-500" style="top: 8%;left: 88vw;"></img>
+      <img src="../../img_modif/dice-12.png" class="icon-bg dice-400" style="top: 35%;left: 90vw;transform:rotate(-30deg)"></img>
+      <img src="../../img_modif/dice-4.png" class="icon-bg dice-500" style="top: 22%;left: 2vw;transform:rotate(15deg)"></img>
+      <img src="../../img_modif/dice-20.png" class="icon-bg dice-400" style="top: 80%;left: 18vw;transform:rotate(55deg)"></img>
+      <img src="../../img_modif/dice-8.png" class="icon-bg dice-600" style="top: 55%;left: 92vw;transform:rotate(0deg)"></img>
+      <img src="../../img_modif/dice-6.png" class="icon-bg dice-400" style="top: 30%;left: 70vw;transform:rotate(0deg)"></img>
+      <img src="../../img_modif/dice-8-2.png"class="icon-bg dice-400" style="top: 45%;left: 0vw;transform:rotate(110deg)"></img>
+      <img src="../../img_modif/dice-4.png" class="icon-bg dice-600" style="top: 70%;left: 0vw;transform:rotate(-30deg)"></img>
+      <img src="../../img_modif/dice-6.png" class="icon-bg dice-600" style="top: 75%;left: 70vw;transform:rotate(-15deg)"></img>
+      <img src="../../img_modif/sorcerer-event.png" class="icon-bg contact__icon" alt="" style="top: 5%; left: 72vw">
+      <img src="../../img_modif/orc-event.png" class="icon-bg contact__icon" alt="" style="top: 55%;">
+      <img src="../../img_modif/male-event.png" class="icon-bg contact__icon special-icon" alt="" style="bottom: 0;left: 90vw">
+      <img src="../../img_modif/archer-event.png" class="icon-bg contact__icon special-icon" alt="" style="bottom: 0;left: 3vw">
       <section
         id="pre-event"
         class="pre-event__text text-center d-flex flex-column justify-content-md-evenly justify-content-center gap-4 mb-5 my-5"
       >
         <img
-          src="../img/Dés_aventures.png"
+          src="../../img/Dés_aventures.png"
           alt=""
           class="col-11 col-12 mx-auto col-md-6 col-lg-4 mt-5 pt-5 mb-3 pt-md-0"
         />
@@ -84,13 +89,13 @@
                   aria-expanded="false"
                 ><p class="m-0">19/08/2022</p> 
                   <img
-                    src="../img/logo-event/logo-1-1.png"
+                    src="../../img/logo-event/logo-1-1.png"
                     alt=""
                     class="event__logo"
                   />
                   LIVRE I
                   <img
-                    src="../img/logo-event/logo-1-2.png"
+                    src="../../img/logo-event/logo-1-2.png"
                     alt=""
                     class="event__logo"
                   />
@@ -129,13 +134,13 @@
                   aria-expanded="false"
                 ><p class="m-0">02/10/2022</p> 
                   <img
-                    src="../img/logo-event/logo-2-1.png"
+                    src="../../img/logo-event/logo-2-1.png"
                     alt=""
                     class="event__logo"
                   />
                   LIVRE II
                   <img
-                    src="../img/logo-event/logo-2-2.png"
+                    src="../../img/logo-event/logo-2-2.png"
                     alt=""
                     class="event__logo"
                   />
@@ -173,13 +178,13 @@
                 ><p class="m-0">02/10/2022</p>
 
                   <img
-                    src="../img/logo-event/logo-3-1.png"
+                    src="../../img/logo-event/logo-3-1.png"
                     alt=""
                     class="event__logo"
                   />
                   LIVRE III
                   <img
-                    src="../img/logo-event/logo-3-2.png"
+                    src="../../img/logo-event/logo-3-2.png"
                     alt=""
                     class="event__logo"
                   />
@@ -206,7 +211,7 @@
                   <li><button class="dropdown-item">Face au Titan</button></li>
                 </ul>
               </div>
-              <img src="../img/gif.gif" alt="" class="order-1 order-md-4">
+              <img src="../../img/gif.gif" alt="" class="order-1 order-md-4">
             </div>
             <div
               id="carouselExampleControls"
@@ -294,7 +299,7 @@
           <div class="col-11 mx-auto col-md-8 col-lg-5 m-5 bg-light text-black position-relative">
             <div id="contact__letter-up" class="contact__letter position-absolute h-50 border-bottom border-secondary col-12 m-0 p-0 bg-light" style="z-index: 6;">
               <h5 class="my-5 text-center fs-1">Formulaire de contact</h5>
-              <button class="letter-open position-absolute start-50 translate-middle-x bg-transparent" style="bottom: -20%;"><img src="../img_modif/stamp.png" alt="" style="height: 100px"></button>
+              <button class="letter-open position-absolute start-50 translate-middle-x bg-transparent" style="bottom: -20%;"><img src="../../img_modif/stamp.png" alt="" style="height: 100px"></button>
             </div>
             <div id="contact__letter-down" class="contact__letter position-absolute h-50 col-12 m-0 p-0 bottom-0 bg-light" style="z-index: 5;"></div>
             <form class=" col-12 py-4">
@@ -336,14 +341,17 @@
     </main>
     <footer class="d-flex justify-content-center gap-md-5 flex-column flex-md-row border-top border-light">
       <div class="my-3 d-flex justify-content-center" style="height: 110px;">
-        <img src="../img/Dés_aventures.png" alt="Logo Dés Aventures" class="mx-auto" style="height: 100%;">
+        <img src="../../img/Dés_aventures.png" alt="Logo Dés Aventures" class="mx-auto" style="height: 100%;">
       </div>
       <div class="mt-3 footer__line border mx-auto mx-md-0 bg-light" style="height: 90%; width: 90px"></div>
       <div class="my-3 me-md-0 d-flex justify-content-evenly justify-content-md-between align-self-center" style="height: fit-content;width: 300px">
-        <a class="footer__link text-decoration-none text-white fs-5" href="./index.html" style="transition: .5s;">Accueil & Presentation</a>
+        <a class="footer__link text-decoration-none text-white fs-5" href="../home/index.html" style="transition: .5s;">Accueil & Presentation</a>
         <a class="text-decoration-none text-white" href="https://www.facebook.com/desaventures" target="_blank"><i class="fa-brands fa-facebook fa-2xl"></i></a>
       </div>
     </footer>
-    <script src="../bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../js/script.js"></script>
+    <script type="text/javascript" src="../../js/nav.js"></script>
+
   </body>
 </html>
