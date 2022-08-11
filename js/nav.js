@@ -2,22 +2,18 @@ class ElementNav {
   constructor(
     target,
     className,
-    width,
-    zIndex,
+    parent,
     id,
     text,
-    parent,
     img,
     src,
     alt
-) {
+  ) {
     this.target = target;
     this.className = className;
-    this.width = width;
-    this.zIndex = zIndex;
+    this.parent = parent;
     this.id = id;
     this.text = text;
-    this.parent = parent;
     this.img = img;
     this.src = src;
     this.alt = alt;
@@ -27,13 +23,8 @@ class ElementNav {
       console.log(this.className[i]);
       this.target.classList.add(this.className[i]);
     }
-    console.log(this);
-    console.log(this.width);
-    if (this.width != undefined) {
-      this.target.style.width = this.width;
-    }
-    if (this.zIndex != undefined) {
-      this.target.style.zIndex = this.zIndex;
+    if (this.parent != undefined) {
+      this.parent.appendChild(this.target);
     }
     if (this.id != undefined) {
       this.target.id = this.id;
@@ -45,53 +36,52 @@ class ElementNav {
       this.target.src = this.src;
       this.target.alt = this.alt;
     }
-    if (this.parent != undefined) {
-      this.parent.appendChild(this.target);
-    }
   }
 }
 
 const header = document.querySelector("header");
 const headerElement = new ElementNav(
   header,
-  ["position-fixed", "d-flex", "justify-content-center", "align-content-end"],
-  "20%",
-  "10"
-);
-headerElement.setElement();
+  ["header__nav","position-fixed", "d-flex", "justify-content-center", "align-content-end"]);
 const buttonNav = document.createElement("button");
-const ButtonElement = new ElementNav(
-  buttonNav,
-  ["button-nav", "mt-4", "d-flex", "rounded-3", "bg-dark"],
-  undefined,
-  undefined,
-  undefined,
-  undefined,
-  header
-);
+const ButtonElement = new ElementNav(buttonNav, ["button-nav","mt-4","d-flex","rounded-3","bg-dark"],header);
 const pNav = document.createElement("p");
 const PNavElement = new ElementNav(
   pNav,
   ["my-2", "ms-2", "text-light", "align-self-center"],
-  undefined,
-  undefined,
+  buttonNav,
   "p-menu",
   "MENU",
-  buttonNav
 );
-ButtonElement.setElement();
-PNavElement.setElement();
 const imgNav = document.createElement("img");
 const imgElement = new ElementNav(
   imgNav,
   "",
-  undefined,
-  undefined,
+  buttonNav,
   "dice-button",
   undefined,
-  buttonNav,
   true,
   "../../img_modif/black_dice-min-min.png",
   "Dé blanc menu"
 );
-imgElement.setElement();
+const createdElement = [headerElement, ButtonElement, PNavElement, imgElement];
+
+for (let i = 0; i < createdElement.length; i++) {
+  createdElement[i].setElement();
+}
+const divNav = document.createElement('div');
+const divElement = new ElementNav(
+  divNav, 
+  ['nav-down', 'd-flex', 'justify-content-center', 'bg-dark']
+)
+const navTag = document.createElement('nav');
+const navElement = new ElementNav(
+  navTag,
+  ['fs-5', 'text-center', 'my-auto', 'w-100'],
+  divNav
+)
+const ul = document.createElement('ul');
+const ulElement = new ElementNav(
+  ul,
+  ['nav', 'flex-column']
+);
