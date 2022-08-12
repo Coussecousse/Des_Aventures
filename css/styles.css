@@ -86,7 +86,7 @@ header {
   font-weight: var(--fw-600);
   letter-spacing: .5rem;
 }
-#nav-down {
+.nav-down {
   position: absolute;
   right: 0;
   height: 100vh;

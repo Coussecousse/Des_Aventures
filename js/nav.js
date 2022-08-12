@@ -1,3 +1,5 @@
+// Class pour créer les différents éléments qui composent le menu:
+
 class ElementNav {
   constructor(
     target,
@@ -5,6 +7,7 @@ class ElementNav {
     parent,
     id,
     text,
+    href,
     img,
     src,
     alt
@@ -14,13 +17,13 @@ class ElementNav {
     this.parent = parent;
     this.id = id;
     this.text = text;
+    this.href = href;
     this.img = img;
     this.src = src;
     this.alt = alt;
   }
   setElement() {
     for (let i = 0; i < this.className.length; i++) {
-      console.log(this.className[i]);
       this.target.classList.add(this.className[i]);
     }
     if (this.parent != undefined) {
@@ -32,6 +35,9 @@ class ElementNav {
     if (this.text != undefined) {
       this.target.textContent = this.text;
     }
+    if (this.href != undefined) {
+      this.target.href = this.href;
+    }
     if (this.img == true) {
       this.target.src = this.src;
       this.target.alt = this.alt;
@@ -39,13 +45,38 @@ class ElementNav {
   }
 }
 
+// Variables:
+//// Ancre : 
 const header = document.querySelector("header");
+
+//// Elements à créer sur l'html : 
+///// Dans le header:
+const buttonNav = document.createElement("button");
+const pNav = document.createElement("p");
+const imgNav = document.createElement("img");
+
+///// Dans la div juste derrière : 
+const divNav = document.createElement('div');
+const navTag = document.createElement('nav');
+const ul = document.createElement('ul');
+///// A ajouter sous l'ul :
+
+////// Dernier élément de la liste : 
+const liLast = document.createElement('li');
+const aLast = document.createElement('a');
+aLast.target = '__blank';
+const i = document.createElement('i');
+
+
+//// Création des différentes classes avec différentes  options:
+/// Sous le modèle : target, className, parent, id, text, href, img, src, alt
 const headerElement = new ElementNav(
   header,
   ["header__nav","position-fixed", "d-flex", "justify-content-center", "align-content-end"]);
-const buttonNav = document.createElement("button");
-const ButtonElement = new ElementNav(buttonNav, ["button-nav","mt-4","d-flex","rounded-3","bg-dark"],header);
-const pNav = document.createElement("p");
+const ButtonElement = new ElementNav(
+  buttonNav, 
+  ["button-nav","mt-4","d-flex","rounded-3","bg-dark"],
+  header);
 const PNavElement = new ElementNav(
   pNav,
   ["my-2", "ms-2", "text-light", "align-self-center"],
@@ -53,35 +84,94 @@ const PNavElement = new ElementNav(
   "p-menu",
   "MENU",
 );
-const imgNav = document.createElement("img");
 const imgElement = new ElementNav(
   imgNav,
   "",
   buttonNav,
   "dice-button",
   undefined,
+  undefined, 
   true,
   "../../img_modif/black_dice-min-min.png",
   "Dé blanc menu"
 );
-const createdElement = [headerElement, ButtonElement, PNavElement, imgElement];
-
-for (let i = 0; i < createdElement.length; i++) {
-  createdElement[i].setElement();
-}
-const divNav = document.createElement('div');
 const divElement = new ElementNav(
   divNav, 
   ['nav-down', 'd-flex', 'justify-content-center', 'bg-dark']
 )
-const navTag = document.createElement('nav');
 const navElement = new ElementNav(
   navTag,
   ['fs-5', 'text-center', 'my-auto', 'w-100'],
   divNav
 )
-const ul = document.createElement('ul');
 const ulElement = new ElementNav(
   ul,
-  ['nav', 'flex-column']
+  ['nav', 'flex-column'],
+  navTag
 );
+initMultipleLi()
+const liLastElement = new ElementNav(
+  liLast,
+  ['py-4', 'nav-item', 'position-relative'],
+  ul,
+  );
+const aLastElement = new ElementNav(
+  aLast,
+  ['nav-link', 'link-light'],
+  liLast,
+);
+const iElement = new ElementNav(
+  i,
+  ['fa-brands', 'fa-facebook','fa-2xl'],
+  aLast
+)
+const createdElement = [headerElement, ButtonElement, PNavElement, imgElement, divElement, navElement, ulElement, liLastElement, aLastElement, iElement];
+
+// Fonction : 
+
+for (let i = 0; i < createdElement.length; i++) {
+  createdElement[i].setElement();
+}
+function initMultipleLi(){
+  const hrefList =  ['#home', '#presentation', '' ,''];
+  const textAList = ['Accueil', 'Présentation', 'Soirées', 'Contact'];
+  for (let i = 0; i < hrefList.length; i++){
+    let li = document.createElement('li');
+    let a = document.createElement('a');
+    let span = document.createElement('span');
+  
+    let liElement = new ElementNav(
+      li,
+      ['py-2', 'nav-item', 'position-relative'],
+      ul,
+      );
+    let aElement = new ElementNav(
+      a,
+      ['nav-link', 'link-light'],
+      li,
+      undefined,
+      textAList[i],
+      hrefList[i]
+    );
+    let spanElement = new ElementNav(
+      span,
+      ['position-absolute', 'top-100', 'start-50', 'translate-middle'],
+      a
+    );
+    let elementsList = [liElement, aElement , spanElement]
+  
+    for (let x = 0; x < elementsList.length; x++){
+      elementsList[x].setElement();
+    }
+  }
+}
+
+// Ajout de la div juste après header : 
+header.parentNode.insertBefore(divNav, header.nextSibling);
+
+//_______________\\
+
+// Animation du menu : 
+buttonNav.addEventListener('click', () => {
+  
+})
