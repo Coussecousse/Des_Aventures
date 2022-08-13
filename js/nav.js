@@ -175,6 +175,7 @@ header.parentNode.insertBefore(divNav, header.nextSibling);
 
 // Variable(s) :
 const divWrap = document.querySelector('.wrap-container');
+const problematicImg = document.querySelector('#problematic-img')
 
 // Fonction(s): 
 buttonNav.addEventListener('click', () => {
@@ -186,7 +187,11 @@ buttonNav.addEventListener('click', () => {
     } else if (window.innerWidth >= 768){
       setSizeBody('w-80', 'w-100', 'w-85');
     } 
+    if (window.innerWidth <= 914){
+      problematicImg.classList.add('pb-md-5');
+    }
   } else {
+    problematicImg.classList.remove('pb-md-5');
     divNav.classList.replace('nav-down', 'nav-up')
     imgNav.classList.remove('dice-rotate');
     setSizeBody('w-100', 'w-85', 'w-80')
