@@ -17,7 +17,7 @@
   --fs-h3 : clamp(1.2rem, 8vw, 3.5rem);
   --fs-h4 : clamp(1rem, 8vw, 2.5rem);
   --fs-p-home : clamp(1vw,1.3rem, 5vw);
-  --fs-p-presentation : clamp(1.3rem, 3vw, 2rem);
+  --fs-p-presentation : clamp(1.3rem, 2.7vw, 2rem);
 
   --size-menu: 60px;
   
