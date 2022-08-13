@@ -75,11 +75,11 @@ const headerElement = new ElementNav(
   ["header__nav","position-fixed", "d-flex", "justify-content-center", "align-content-end"]);
 const ButtonElement = new ElementNav(
   buttonNav, 
-  ["button-nav","mt-4","d-flex","rounded-3","bg-dark"],
+  ["button-nav","mt-4","d-flex","rounded-3","bg-dark", 'text-light'],
   header);
 const PNavElement = new ElementNav(
   pNav,
-  ["my-2", "ms-2", "text-light", "align-self-center"],
+  ["my-2", "ms-2", "align-self-center"],
   buttonNav,
   "p-menu",
   "MENU",
@@ -97,7 +97,7 @@ const imgElement = new ElementNav(
 );
 const divElement = new ElementNav(
   divNav, 
-  ['nav-down', 'd-flex', 'justify-content-center', 'bg-dark']
+  ['nav-div', 'nav-up', 'd-flex', 'justify-content-center', 'bg-dark']
 )
 const navElement = new ElementNav(
   navTag,
@@ -172,6 +172,32 @@ header.parentNode.insertBefore(divNav, header.nextSibling);
 //_______________\\
 
 // Animation du menu : 
+
+// Variable(s) :
+const divWrap = document.querySelector('.wrap-container');
+
+// Fonction(s): 
 buttonNav.addEventListener('click', () => {
-  
+  if (divNav.classList.contains('nav-up')){
+    divNav.classList.replace('nav-up', 'nav-down');
+    imgNav.classList.add('dice-rotate')
+    if (window.innerWidth >= 1080){
+      setSizeBody('w-85', 'w-100', 'w-80')
+    } else if (window.innerWidth >= 768){
+      setSizeBody('w-80', 'w-100', 'w-85');
+    } 
+  } else {
+    divNav.classList.replace('nav-down', 'nav-up')
+    imgNav.classList.remove('dice-rotate');
+    setSizeBody('w-100', 'w-85', 'w-80')
+  }
 })
+
+function setSizeBody(desiredSize, firstSize, Secondsize){
+  let valueChange = [desiredSize, firstSize, Secondsize];
+  for (let i = 1; i < valueChange.length; i++){
+    if (divWrap.classList.contains(valueChange[i])){
+      divWrap.classList.replace(valueChange[i], valueChange[0]);
+    }
+  }
+}
