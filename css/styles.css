@@ -110,7 +110,6 @@ header {
   transform: translateY(0%);
 }
 
-
 .nav-item span {
   background: var(--color-green);
   height: 1px;
@@ -158,6 +157,17 @@ button {
 #green-dice {
   left: var(--left-gDice);
   top: var(--t-gDice);
+}
+@keyframes upAndDown {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+#arrow{
+  animation: .5s ease-in-out upAndDown alternate infinite;
 }
 
 /* STYLE PRESENTATION */
