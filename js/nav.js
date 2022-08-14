@@ -182,16 +182,18 @@ buttonNav.addEventListener('click', () => {
   if (divNav.classList.contains('nav-up')){
     divNav.classList.replace('nav-up', 'nav-down');
     imgNav.classList.add('dice-rotate')
-    if (window.innerWidth >= 1080){
+    // if (window.innerWidth <= 1990){
+    //   problematicImg.classList.add('pb-5');
+    // }
+    if (window.innerWidth >= 1200){
       setSizeBody('w-85', 'w-100', 'w-80')
     } else if (window.innerWidth >= 768){
       setSizeBody('w-80', 'w-100', 'w-85');
+      problematicImg.classList.add('pb-5');
+
     } 
-    if (window.innerWidth <= 914){
-      problematicImg.classList.add('pb-md-5');
-    }
   } else {
-    problematicImg.classList.remove('pb-md-5');
+    problematicImg.classList.remove('pb-5');
     divNav.classList.replace('nav-down', 'nav-up')
     imgNav.classList.remove('dice-rotate');
     setSizeBody('w-100', 'w-85', 'w-80')
