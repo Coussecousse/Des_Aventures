@@ -75,7 +75,7 @@ const headerElement = new ElementNav(
   ["header__nav","position-fixed", "d-flex", "justify-content-center", "align-content-end"]);
 const ButtonElement = new ElementNav(
   buttonNav, 
-  ["button-nav","mt-4","d-flex","rounded-3","bg-dark", 'text-light'],
+  ["button-nav","mt-4","d-flex","rounded-3","bg-dark", 'text-light', 'px-1'],
   header);
 const PNavElement = new ElementNav(
   pNav,
