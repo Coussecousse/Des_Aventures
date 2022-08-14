@@ -33,9 +33,7 @@
   --t-Dés : 15%;
   --t-gDice : 8%;
   --left-wDice : 15%;
-  --left-gDice : -10%;
-
-  --rotate-wDice : rotate(-25deg);
+  --left-gDice : -12%;
 
   --dice-400 : clamp(50px, 8vw, 100px);
   --dice-500 : clamp(80px, 15vw, 150px);
@@ -151,12 +149,37 @@ button {
   position: relative;
 }
 #white-dice {
-  transform: var(--rotate-wDice);
   left: var(--left-wDice);
 }
 #green-dice {
   left: var(--left-gDice);
   top: var(--t-gDice);
+}
+.Gdice__move-in {
+  animation: 2.5s ease-out WmoveIn;
+}
+.Wdice__move-in {
+  animation: 2s ease-out WmoveIn;
+}
+@keyframes GmoveIn {
+  from {
+    transform: translateX(150%) rotate(0);
+  }
+  to {
+    transform: translateX(0) rotate(120deg);
+  }
+}
+@keyframes WmoveIn {
+  from {
+    transform: translateX(200%) rotate(0);
+  }
+  to {
+    transform: translateX(0) rotate(360deg);
+  }
+}
+
+@keyframes dicesWiggleWiggle {
+
 }
 @keyframes upAndDown {
   from {
