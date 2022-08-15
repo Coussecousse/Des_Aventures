@@ -156,17 +156,17 @@ button {
   top: var(--t-gDice);
 }
 .Gdice__move-in {
-  animation: 2.5s ease-out WmoveIn;
+  animation: 2s ease-out WmoveIn;
 }
 .Wdice__move-in {
-  animation: 2s ease-out WmoveIn;
+  animation: 1.5s ease-out WmoveIn;
 }
 @keyframes GmoveIn {
   from {
     transform: translateX(150%) rotate(0);
   }
   to {
-    transform: translateX(0) rotate(120deg);
+    transform: translateX(0) rotate(-380deg);
   }
 }
 @keyframes WmoveIn {
@@ -174,12 +174,29 @@ button {
     transform: translateX(200%) rotate(0);
   }
   to {
-    transform: translateX(0) rotate(360deg);
+    transform: translateX(0) rotate(-380deg);
   }
+}
+.Wdice__wiggle {
+  animation: 2.5s ease-in-out dicesWiggleWiggle;
 }
 
 @keyframes dicesWiggleWiggle {
-
+  0% {
+    transform: translateX(0px) rotate(-380deg);
+  }
+  25%{
+    transform: rotate(-350deg);
+  }
+  50%{
+    transform: rotate(-365deg);
+  }
+  75%{
+    transform: rotate(-355deg);
+  }
+  100% {
+    transform: translateX(0) rotate(-360deg);
+  }
 }
 @keyframes upAndDown {
   from {
