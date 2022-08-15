@@ -2,62 +2,61 @@
 :root {
   --color-green: #2ad496;
 
-  --fw-400 : 400;
-  --fw-500 : 600;
-  --fw-600 : 700;
+  --fw-400: 400;
+  --fw-500: 600;
+  --fw-600: 700;
 
+  --ff-500: "Source Serif Pro", serif;
+  --ff-600: "Cabin Sketch", serif;
 
-  --ff-500 : 'Source Serif Pro', serif;
-  --ff-600 : "Cabin Sketch", serif;
-
-  --fs-500 : 1rem;
-  --fs-600 : 1.25rem;
-  --fs-h1 : clamp(2rem, 10vw,7rem);
-  --fs-h2 : clamp(1.5rem, 8vw, 6rem);
-  --fs-h3 : clamp(1.2rem, 8vw, 3.5rem);
-  --fs-h4 : clamp(1rem, 8vw, 2.5rem);
-  --fs-p-home : clamp(1vw,1.3rem, 5vw);
-  --fs-p-presentation : clamp(1.3rem, 3vw, 2rem);
+  --fs-500: 1rem;
+  --fs-600: 1.25rem;
+  --fs-h1: clamp(2rem, 10vw, 7rem);
+  --fs-h2: clamp(1.5rem, 8vw, 6rem);
+  --fs-h3: clamp(1.2rem, 8vw, 3.5rem);
+  --fs-h4: clamp(1rem, 8vw, 2.5rem);
+  --fs-p-home: clamp(1vw, 1.3rem, 5vw);
+  --fs-p-presentation: clamp(1.3rem, 3vw, 2rem);
 
   --size-menu: 60px;
-  
-  --h-Dés : clamp(70px, 15vw, 13rem);
-  --h-Aventures : clamp(50px, 14vw, 12rem);
-  --h-primary-dice : clamp(100px, 18vw, 16rem);
-  --h-icon : clamp(80px, 15vw, 250px);
-  --h-logo : 45px;
+
+  --h-Dés: clamp(70px, 15vw, 13rem);
+  --h-Aventures: clamp(50px, 14vw, 12rem);
+  --h-primary-dice: clamp(100px, 18vw, 16rem);
+  --h-icon: clamp(80px, 15vw, 250px);
+  --h-logo: 45px;
   --h-black-cube: 240px;
-  
-  --w-brush : clamp(380px, 80vw, 700px);
-  --w-splash : clamp(290px, 50vw, 500px);
 
-  --t-Dés : 15%;
-  --t-gDice : 8%;
-  --left-wDice : 15%;
-  --left-gDice : -12%;
+  --w-brush: clamp(380px, 80vw, 700px);
+  --w-splash: clamp(290px, 50vw, 500px);
 
-  --dice-400 : clamp(50px, 8vw, 100px);
-  --dice-500 : clamp(80px, 15vw, 150px);
-  --dice-600 : clamp(100px, 20vw, 200px);
+  --t-Dés: 15%;
+  --t-gDice: 8%;
+  --left-wDice: 15%;
+  --left-gDice: -12%;
 
-/* ______DEKSTOP_______ */
+  --dice-400: clamp(50px, 8vw, 100px);
+  --dice-500: clamp(80px, 15vw, 150px);
+  --dice-600: clamp(100px, 20vw, 200px);
 
-  --t-Dés-max : 35%;
-  --t-wDice-max : 32%;
-  --t-gDice-max : 39%;
-  --t-brush-first-max : ;
+  /* ______DEKSTOP_______ */
 
-  --left-Dés-max : 2%;
-  --left-wDice-max : 8%;
-  --left-gDice-max : -18%;
+  --t-Dés-max: 35%;
+  --t-wDice-max: 32%;
+  --t-gDice-max: 39%;
+  --t-brush-first-max: ;
 
-  --left-knight-max : 50%; 
+  --left-Dés-max: 2%;
+  --left-wDice-max: 8%;
+  --left-gDice-max: -18%;
+
+  --left-knight-max: 50%;
 }
 
 /* GENERAL */
 
 * {
-  margin:0 ;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -72,7 +71,7 @@ header li {
 header {
   right: 50%;
   transform: translateX(50%);
-  width: 20%; 
+  width: 20%;
   z-index: 10;
 }
 .button-nav:hover {
@@ -82,7 +81,7 @@ header {
 #dice-button {
   height: var(--size-menu);
   width: var(--size-menu);
-  transition: .5s ease-out;
+  transition: 0.5s ease-out;
 }
 .dice-rotate {
   transform: rotate(180deg);
@@ -91,7 +90,7 @@ header {
   width: 100%;
   font-size: var(--fs-600);
   font-weight: var(--fw-600);
-  letter-spacing: .5rem;
+  letter-spacing: 0.5rem;
 }
 .nav-div {
   position: fixed;
@@ -99,7 +98,7 @@ header {
   height: 100vh;
   width: 100%;
   z-index: 9;
-  transition: .5s ease-out;
+  transition: 0.5s ease-out;
 }
 
 .nav-up {
@@ -131,8 +130,8 @@ button {
 .w-85 {
   width: 85%;
 }
-.wrap-container{
-  transition: .5s ease-out;
+.wrap-container {
+  transition: 0.5s ease-out;
 }
 #Dés {
   height: var(--h-Dés);
@@ -186,13 +185,13 @@ button {
   0% {
     transform: translateX(0px) rotate(-380deg);
   }
-  25%{
+  25% {
     transform: rotate(-350deg);
   }
-  50%{
+  50% {
     transform: rotate(-365deg);
   }
-  75%{
+  75% {
     transform: rotate(-355deg);
   }
   100% {
@@ -207,8 +206,8 @@ button {
     transform: translateY(-10px);
   }
 }
-#arrow{
-  animation: .5s ease-in-out upAndDown alternate infinite;
+#arrow {
+  animation: 0.5s ease-in-out upAndDown alternate infinite;
 }
 
 /* STYLE PRESENTATION */
@@ -216,7 +215,11 @@ button {
   font-family: var(--ff-500);
   font-weight: var(--fw-600);
 }
-h1,h2, h3, .pre-event__p,h4 {
+h1,
+h2,
+h3,
+.pre-event__p,
+h4 {
   font-family: var(--ff-600);
   font-weight: var(--fw-400);
 }
@@ -226,10 +229,15 @@ h1 {
 h2 {
   font-size: var(--fs-h2);
 }
-h3, .pre-event__p {
+h3,
+.pre-event__p {
   font-size: var(--fs-h3);
 }
-h1 span, h2 span, h3 span, .pre-event__p span, .contact__p span {
+h1 span,
+h2 span,
+h3 span,
+.pre-event__p span,
+.contact__p span {
   color: var(--color-green);
   font-weight: var(--fw-600);
 }
@@ -260,13 +268,13 @@ h5 {
   }
 }
 .presentation__icon {
-  height: var(--h-icon); 
+  height: var(--h-icon);
   width: auto;
   z-index: 2;
 }
 .dice-500 {
   width: var(--dice-500);
-  height:  var(--dice-500);
+  height: var(--dice-500);
 }
 .dice-400 {
   width: var(--dice-400);
@@ -299,13 +307,13 @@ h5 {
 }
 
 .jump {
-  animation : jump 3s ease-in-out infinite alternate;
+  animation: jump 3s ease-in-out infinite alternate;
 }
 @keyframes jump {
   from {
     transform: translateY(0);
   }
-  to{
+  to {
     transform: translateY(10px);
   }
 }
@@ -316,42 +324,62 @@ h5 {
 .presentation__brush-splash {
   width: var(--w-splash);
   object-fit: contain;
-  z-index: -2;
+  z-index: -5;
+}
+.brush__splash {
+  opacity: 0;
+  transition: .5s linear;
+}
+.brush__splash-visible {
+  opacity: 1;
+}
+@keyframes magicSplash {
+  from {
+    opacity: 0;
+  } 
+  to {
+    opacity: 1;
+  }
 }
 
-.footer__link::after, .footer__link::before {
-  content:'';
+.footer__link::after,
+.footer__link::before {
+  content: "";
   width: 0;
   height: 1px;
   display: block;
   position: relative;
   background: var(--color-green);
-  transition: .3s;
+  transition: 0.3s;
 }
 
-.footer__link:hover::after, .footer__link:hover::before {
+.footer__link:hover::after,
+.footer__link:hover::before {
   width: 100%;
 }
 
-.event__choice-date, .event__choice-dropdown {
+.event__choice-date,
+.event__choice-dropdown {
   background-color: var(--bs-gray-800) !important;
   color: white !important;
 }
-.event__choice-date:hover, .dropdown-item:hover {
+.event__choice-date:hover,
+.dropdown-item:hover {
   background: var(--bs-gray-700) !important;
 }
 
 .dropdown-item {
-  color:white !important;
+  color: white !important;
 }
 .event__choice-active {
   border: var(--color-green) solid 1px !important ;
 }
-.event__choice-active, .dropdown-active {
+.event__choice-active,
+.dropdown-active {
   color: var(--color-green) !important;
 }
 .event__logo {
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
   height: var(--h-logo);
 }
 .contact__p {
@@ -361,12 +389,14 @@ h5 {
   margin-bottom: 0 !important;
 }
 
-input[type=text], input[type=email] {
+input[type="text"],
+input[type="email"] {
   background: var(--bs-light);
   border-radius: 0;
   border: none;
 }
-input[type=text], input[type=email] {
+input[type="text"],
+input[type="email"] {
   border-bottom: 1px solid black;
 }
 #floatingTextarea {
@@ -381,18 +411,18 @@ input[type=text], input[type=email] {
 }
 
 .form__event:hover {
-  background-color: var(--color-green) ;
+  background-color: var(--color-green);
 }
-.form-check-input:checked{
+.form-check-input:checked {
   background-color: #2ad496;
-  border-color : #2ad496;
+  border-color: #2ad496;
 }
 .contact__letter {
   transform-style: preserve-3d;
-  transition: .5s ease-in;
+  transition: 0.5s ease-in;
 }
 
-#contact__letter-up:hover  {
+#contact__letter-up:hover {
   transform: translateY(-100%) rotateX(180deg);
 }
 
@@ -400,11 +430,11 @@ input[type=text], input[type=email] {
   transform: translateY(100%) rotateX(-180deg);
 }
 .contact__icon {
-  height: var(--h-icon); 
+  height: var(--h-icon);
 }
 
 /* ______________MEDIA SCREEN */
-@media screen and (max-width:767px) {
+@media screen and (max-width: 767px) {
   #contact-event .icon-bg {
     visibility: hidden;
   }
@@ -428,12 +458,12 @@ input[type=text], input[type=email] {
   }
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   #contact-event .icon-bg {
     visibility: visible;
   }
   #knight {
-    left:var(--left-knight-max) !important;
+    left: var(--left-knight-max) !important;
   }
   .footer__line {
     transform: rotate(-90deg) translate(-50%);
@@ -447,7 +477,7 @@ input[type=text], input[type=email] {
   }
 }
 
-@media screen and (min-width: 1200px){
+@media screen and (min-width: 1200px) {
   header {
     width: 15%;
   }

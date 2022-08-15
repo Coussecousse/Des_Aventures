@@ -37,7 +37,7 @@ console.log(scrollY);
 window.addEventListener('scroll', () => {  
     let scrollY = window.scrollY;
 
-    if (scrollY >= distanceFromTheTopFirst -200 ){
+    if (scrollY >= distanceFromTheTopFirst - 500 ){
         setTimeout(() => {
             dicesGoBack.forEach( dice => {
                 dice.style.zIndex = '-6';
@@ -45,6 +45,8 @@ window.addEventListener('scroll', () => {
         }, 530);
         blackCube.classList.add('cube-left');
     } 
-    
+    if (scrollY >= distanceFromTheTopSecond - 300){
+        SecondBrush.classList.add('brush__splash-visible');
+    }
     
 })
