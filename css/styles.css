@@ -26,6 +26,7 @@
   --h-primary-dice : clamp(100px, 18vw, 16rem);
   --h-icon : clamp(80px, 15vw, 250px);
   --h-logo : 45px;
+  --h-black-cube: 240px;
   
   --w-brush : clamp(380px, 80vw, 700px);
   --w-splash : clamp(290px, 50vw, 500px);
@@ -278,13 +279,25 @@ h5 {
 
 .icon-bg {
   position: absolute;
-  z-index: -3;
+  z-index: -2;
 }
 .presentation__brush {
   width: var(--w-brush);
   object-fit: contain;
+  z-index: -5;
+}
+.goBack {
   z-index: -2;
 }
+
+#black-cube {
+  transition: 1s ease-in;
+  z-index: -3;
+}
+.cube-left {
+  transform: translateX(-200%);
+}
+
 .jump {
   animation : jump 3s ease-in-out infinite alternate;
 }
@@ -298,6 +311,7 @@ h5 {
 }
 .presentation__text {
   font-size: var(--fs-p-presentation);
+  z-index: -4;
 }
 .presentation__brush-splash {
   width: var(--w-splash);
