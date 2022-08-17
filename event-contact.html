@@ -272,15 +272,23 @@
           </div>
         </section>
         <section id="contact" class="mt-5 w-100">
-          <div class="container">
+          <div id="contact__container" class="container">
             <p class="contact__p fs-1 text-center col-11 mx-auto">D'abord, tu choisis ton <span>aventure </span>à la <span>date</span> qui te convient puis tu nous contactes pour réserver ta <span>place</span> !</p>
-            <div class="col-11 mx-auto col-md-8 col-lg-5 m-5 bg-light text-black position-relative">
-              <div id="contact__letter-up" class="contact__letter position-absolute h-50 border-bottom border-secondary col-12 m-0 p-0 bg-light" style="z-index: 6;">
-                <h5 class="my-5 text-center fs-1">Formulaire de contact</h5>
-                <button class="letter-open position-absolute start-50 translate-middle-x bg-transparent" style="bottom: -20%;"><img src="../../img_modif/stamp.png" alt="" style="height: 100px"></button>
+            <div id="letter" class="col-11 mx-auto col-md-8 col-lg-5 m-5 bg-light text-black position-relative">
+              <div id="letter_up" class="contact__letter position-absolute h-50 border-bottom border-secondary col-12 m-0 p-0 bg-light" style="z-index: 6;">
+                <div id="letter-front" class="position-absolute h-100 col-12 bg-light">
+                  <h5 class="my-5 text-center fs-1">Formulaire de contact</h5>
+                  <button class="position-absolute start-50 translate-middle-x bg-transparent" style="bottom: -20%;"><img src="../../img_modif/stamp.png" alt="" style="height: 100px"></button>
+                </div>
+                <div id="letter-back" class="position-absolute h-100 col-12 bg-light">
+                  <button class="letter__button-back position-absolute start-50 translate-middle-x bg-transparent"><img src="../../img_modif/stamp-50-1.png" alt="" style="height: 100px; z-index: -5"></button>
+                </div>
               </div>
-              <div id="contact__letter-down" class="contact__letter position-absolute h-50 col-12 m-0 p-0 bottom-0 bg-light" style="z-index: 5;"></div>
-              <form class=" col-12 py-4">
+              <div id="letter_down" class="contact__letter position-absolute h-50 border-bottom border-secondary col-12 m-0 p-0 bg-light bottom-0" style="z-index: 5;">
+                <div class="position-absolute h-100 col-12 bg-light">
+                </div>
+              </div>
+              <form class="col-12 py-4">
                 <div class="mb-3 col-10 mx-auto">
                   <label for="name" class="form-label">Nom :</label>
                   <input type="text" class="form-control" id="name">
@@ -332,7 +340,7 @@
       </div>
     </main>
     <script src="../../bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
-    <!-- <script type="text/javascript" src="../../js/script.js"></script> -->
+    <script type="text/javascript" src="../../js/script.event.js"></script>
     <script type="text/javascript" src="../../js/nav.js"></script>
   </body>
 </html>

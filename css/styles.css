@@ -60,6 +60,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  height: --webkit-fill-available;
+}
 body {
   font-family: var(--ff);
   font-size: var(--fs-500);
@@ -343,6 +346,7 @@ h5 {
   }
 }
 
+
 .footer__link::after,
 .footer__link::before {
   content: "";
@@ -358,7 +362,19 @@ h5 {
 .footer__link:hover::before {
   width: 100%;
 }
+/* EVENT & CONTACT */
 
+#contact__container {
+  height: 105vh;
+  transition: height .5s ease-in-out;
+}
+
+.letter-height {
+  height: var(--h-letter);
+}
+#letter {
+  transition: .5s ease-in-out;
+}
 .event__choice-date,
 .event__choice-dropdown {
   background-color: var(--bs-gray-800) !important;
@@ -420,21 +436,37 @@ input[type="email"] {
 }
 .contact__letter {
   transform-style: preserve-3d;
-  transition: 0.5s ease-in;
+  transition: 0.5s ease-in-out;
 }
 
-#contact__letter-up:hover {
-  transform: translateY(-100%) rotateX(180deg);
+#letter-front, 
+#letter-back {
+  backface-visibility: hidden;
+}
+#letter-back {
+  transform: rotateY(180deg);
+}
+.open-on_up {
+  transform: translateY(-90%) rotateX(150deg);
+}
+.open-on_down {
+  transform: translateY(80%) rotateX(-130deg);
+
+}
+.letter__button-back {
+  bottom: -21%;
 }
 
-#contact__letter-down:hover {
-  transform: translateY(100%) rotateX(-180deg);
-}
 .contact__icon {
   height: var(--h-icon);
 }
 
 /* ______________MEDIA SCREEN */
+@media screen and (max-width: 350px) {
+  .letter__button-back {
+    bottom: -19%;
+  }
+}
 @media screen and (max-width: 767px) {
   #contact-event .icon-bg {
     visibility: hidden;
@@ -484,5 +516,12 @@ input[type="email"] {
   }
   .nav-div {
     width: 15%;
+  }
+}
+
+@supports (-webkit-touch-callout: none) {
+  body {
+    /* The hack for Safari */
+    min-height: -webkit-fill-available;
   }
 }
