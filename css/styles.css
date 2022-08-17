@@ -45,7 +45,6 @@
   --t-Dés-max: 35%;
   --t-wDice-max: 32%;
   --t-gDice-max: 39%;
-  --t-brush-first-max: ;
 
   --left-Dés-max: 2%;
   --left-wDice-max: 8%;
@@ -295,12 +294,10 @@ h5 {
   object-fit: contain;
   z-index: -5;
 }
-.goBack {
-  z-index: -2;
-}
+
 
 .black-cube {
-  transition: 1s ease-in;
+  transition: .8s ease-in;
   z-index: -3;
 }
 .cube-left {
@@ -308,7 +305,6 @@ h5 {
 }
 .cube-right {
   transform: translateX(200%);
-  z-index: -3;
 }
 
 .jump {
