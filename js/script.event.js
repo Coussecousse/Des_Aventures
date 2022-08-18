@@ -30,5 +30,5 @@ letterUp.addEventListener('click', () => {
     }
     console.log(totalHeight)
     sectionContact.style.height = totalHeight-120 + 'px';
-    letter.style.transform = 'translateY(45%)';
+    letter.style.transform = 'translateY(55%)';
 })
