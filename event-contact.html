@@ -274,54 +274,105 @@
         <section id="contact" class="mt-5 w-100">
           <div id="contact__container" class="container">
             <p class="contact__p fs-1 text-center col-11 mx-auto">D'abord, tu choisis ton <span>aventure </span>à la <span>date</span> qui te convient puis tu nous contactes pour réserver ta <span>place</span> !</p>
-            <div id="letter" class="col-11 mx-auto col-md-8 col-lg-5 m-5 bg-light text-black position-relative">
-              <div id="letter_up" class="contact__letter position-absolute border-bottom border-secondary col-12 m-0 p-0 bg-light" style="z-index: 6;height: 65%;">
-                <div id="letter-front_top" class="position-absolute h-100 col-12 bg-light">
-                  <h5 class="text-center fs-1 position-relative top-50 translate-middle-y">Formulaire de contact</h5>
-                  <button class="position-absolute start-50 translate-middle-x bg-transparent" style="bottom: -15%;"><img src="../../img_modif/stamp.png" alt="" style="height: 100px"></button>
+            <div id="letter" class="col-11 mx-auto col-md-8 col-lg-6 m-5 bg-light text-black position-relative">
+              <form class="col-12 fs-5">
+                <div id="letter_up" class="contact__letter position-absolute border-bottom border-secondary col-12 m-0 p-0 bg-light" style="z-index: 6;height: 55%;">
+                  <div id="letter-front_top" class="position-absolute h-100 col-12 bg-light">
+                    <h5 class="text-center fs-1 position-relative top-50 translate-middle-y">Formulaire de contact</h5>
+                    <button class="position-absolute start-50 translate-middle-x bg-transparent" style="bottom: -15%;"><img src="../../img_modif/stamp.png" alt="" style="height: 100px"></button>
+                  </div>
+                  <div id="letter-back_top" class="position-absolute h-100 col-12 bg-light">
+                    <button class="letter__button-back position-absolute start-50 translate-middle-x bg-transparent"><img src="../../img_modif/stamp-50-1.png" alt="" style="height: 100px; z-index: -5"></button>
+                    <div class="position-relative top-50" style="transform: translateY(-20%)">
+                      <div class="mb-3 col-10 mx-auto">
+                        <label for="name" class="form-label" >Nom :</label>
+                        <input type="text" class="form-control bg-transparent fs-5 p-0 ps-1" id="name">
+                      </div>
+                      <div class="col-10 mx-auto">
+                        <label for="email" class="form-label">Email :</label>
+                        <input type="email" class="form-control bg-transparent fs-5" id="email">
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div id="letter-back_top" class="position-absolute h-100 col-12 bg-light">
-                  <button class="letter__button-back position-absolute start-50 translate-middle-x bg-transparent"><img src="../../img_modif/stamp-50-1.png" alt="" style="height: 100px; z-index: -5"></button>
+                <div class="form__second-part py-4">
+                  <p class="col-10 mx-auto m-0" >Raison de contact : </p>
+                  <div class="col-10 mx-auto d-flex flex-wrap flex-column">
+                    <p class="col-12 m-0">Soirée du...</p>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="reason" id="firstDate" value="firstDate" checked>
+                      <label class="form-check-label" for="firstDate">
+                        19/08/2022
+                      </label>
+                    </div>
+                    <div class="mb-3">
+                      <select class="form-select bg-transparent fs-5" id="reason" disabled>
+                        <option value="">-- Choisir</option>
+                        <option value="" class="form__event">For the Queen</option>
+                        <option value="" class="form__event">CHRONIQUES OUBLIEES : La relique Défendue</option>
+                        <option value="" class="form__event">Donjons & Dragons 5ème édition</option>
+                        <option value="" class="form__event">City of Mist</option>
+                        <option value="" class="form__event">Campagne « Les Marches de L'ouest » FALLOUT - Session #1</option>
+                        <option value="" class="form__event">CHRONIQUES OUBLIÉES : Mystère à Clairval</option>
+                        <option value="" class="form__event">For the Crown</option>
+                      </select>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="reason" id="secondDate" value="secondDate">
+                      <label class="form-check-label" for="secondDate">
+                        02/10/2022
+                      </label>
+                    </div>
+                    <div class="mb-3">
+                      <select class="form-select bg-transparent fs-5" id="reason" disabled>
+                        <option value="">-- Choisir</option>
+                        <option value="" class="form__event">ONIRIS- "Un Bruit Au Fond Du Trou"</option>
+                        <option value="" class="form__event">STAR WARS - "Une Nuit À La Station Tosche"</option>
+                        <option value="" class="form__event">Rune</option>
+                        <option value="" class="form__event">KAAMELOTT - "Excalibur a disparu"</option>
+                        <option value="" class="form__event">FALLOUT - Campagne "Les Marches de l'ouest" #5</option>
+                      </select>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="reason" id="thirdDate" value="thirdDate">
+                      <label class="form-check-label" for="thirdDate">
+                        02/10/2022
+                      </label>
+                    </div>
+                    <div class="mb-3">
+                      <select class="form-select bg-transparent fs-5" id="reason" disabled>
+                        <option value="">-- Choisir</option>
+                        <option value="" class="form__event">Hogward</option>
+                        <option value="" class="form__event">Alien</option>
+                        <option value="" class="form__event">CHRONIQUE OUBLIÉES : Les Mystères de Clairval (Partie II)</option>
+                        <option value="" class="form__event">LE DONJON DE NAHEULBEUK: Les ruines d'Asvaard</option>
+                        <option value="" class="form__event">HONEY HEIST : Le Plan "Tigrade"</option>
+                        <option value="" class="form__event">Face au Titan</option>
+                      </select>
+                    </div>
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="radio" name="reason" id="other" value="other">
+                      <label class="form-check-label" for="other">
+                        ou autre...
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-group mb-5 col-10 mx-auto">
+                    <textarea class="form-control fs-5 pt-1 bg-transparent" placeholder="Message..." id="floatingTextarea" style="height: 100px"></textarea>
+                  </div>
                 </div>
-              </div>
-              <div id="letter_down" class="contact__letter position-absolute col-12 m-0 p-0 bg-light bottom-0" style="z-index: 5;height: 45%">
-                <div id="letter-front_bot" class="position-absolute h-100 col-12 bg-light">
-                </div>
-                <div id="letter-back_bot" class="position-absolute h-100 col-12 bg-light">
-                </div>
-              </div>
-              <form class="col-12 py-4 fs-5">
-                <div class="mb-3 col-10 mx-auto">
-                  <label for="name" class="form-label">Nom :</label>
-                  <input type="text" class="form-control bg-transparent fs-5 p-0 ps-1" id="name">
-                </div>
-                <div class="mb-3 col-10 mx-auto">
-                  <label for="email" class="form-label">Email :</label>
-                  <input type="email" class="form-control bg-transparent fs-5" id="email">
-                </div>
-                <div class="mb-3 col-10 mx-auto">
-                  <label for="reason" class="form-label">Raison de contact :</label>
-                  <select class="form-select bg-transparent fs-5" id="reason">
-                    <option value="">-- Choisir</option>
-                    <option value="" class="form__event">19/08/2022 ** For the Queen</option>
-                    <option value="" class="form__event">19/08/2022 ** CHRONIQUES OUBLIEES : La relique Défendue</option>
-                    <option value="" class="form__event">19/08/2022 ** Donjons & Dragons 5ème édition</option>
-                    <option value="" class="form__event">19/08/2022 ** City of Mist</option>
-                    <option value="" class="form__event">19/08/2022 ** Campagne « Les Marches de L'ouest » FALLOUT - Session #1</option>
-                    <option value="" class="form__event">19/08/2022 ** CHRONIQUES OUBLIÉES : Mystère à Clairval</option>
-                    <option value="" class="form__event">19/08/2022 ** For the Crown</option>
-                    <option>Autre...</option>
-                  </select>
-                </div>
-                <div class="form-floating mb-3 col-10 mx-auto">
-                  <textarea class="form-control fs-5 pt-1 bg-transparent" placeholder="lala" id="floatingTextarea" style="height: 100px"></textarea>
-                </div>
-                <div class="form-check mb-3  ps-md-4 col-10 mx-auto">
-                  <input class="form-check-input" type="checkbox" value="" id="flexCheck">
-                  <label class="form-check-label" for="flexCheck">Je m'engage à prévenir l'association Dés Aventures en cas de retard ou de désistement.
-                  </label>
-                </div>
-                <button disabled type="submit" class="btn col-5 col-lg-2 p-2 position-relative start-50 translate-middle-x" style="background: var(--color-green);">Envoyer</button>
+                <div id="letter_down" class="contact__letter position-absolute col-12 m-0 p-0 bg-light bottom-0" style="z-index: 5;height: 45%">
+                  <div id="letter-front_bot" class="position-absolute h-100 col-12 bg-light"></div>
+                  <div id="letter-back_bot" class="position-absolute h-100 col-12 bg-light">
+                    <div class="position-relative top-50 translate-middle-y">
+                      <div class="form-check mb-3 ps-md-4 col-10 mx-auto">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheck">
+                        <label class="form-check-label" for="flexCheck">Je m'engage à prévenir l'association Dés Aventures en cas de retard ou de désistement.
+                        </label>
+                      </div>
+                      <button disabled type="submit" class="fs-5 btn col-5 col-lg-2 p-2 position-relative start-50 translate-middle-x" style="background: var(--color-green);">Envoyer</button>
+                    </div>
+                  </div>
               </form>
             </div>
           </div>

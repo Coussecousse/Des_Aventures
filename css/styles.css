@@ -446,14 +446,9 @@ input[type="email"] {
 }
 #reason {
   background-color: var(--bs-light);
-  border: none;
-  border-radius: 0;
-  border-bottom: 1px solid black;
+  border-color: black;
 }
 
-.form__event:hover {
-  background-color: var(--color-green);
-}
 .form-check-input:checked {
   background-color: #2ad496;
   border-color: #2ad496;
@@ -473,7 +468,7 @@ input[type="email"] {
 }
 
 #letter-back_top, #letter-back_bot {
-  transform: rotateY(180deg);
+  transform: rotateX(180deg);
 }
 #letter-front_top {
   box-shadow: inset 0px 43px 32px -30px rgba(0,0,0,0.31), inset -40px 0px 32px -30px rgba(0,0,0,0.31), inset 40px 0px 32px -30px rgba(0,0,0,0.31), 0px 2px 7px 3px rgba(0,0,0,0.3);
@@ -482,24 +477,24 @@ input[type="email"] {
   box-shadow: inset 0px -43px 32px -30px rgba(0,0,0,0.31), inset -40px 0px 32px -30px rgba(0,0,0,0.31), inset 40px 0px 32px -30px rgba(0,0,0,0.31);
 }
 #letter-back_top {
-  box-shadow: inset 0px -43px 35px 3px rgba(0,0,0,0.21), inset -40px 0px 32px -30px rgba(0,0,0,0.31), inset 40px 0px 32px -30px rgba(0,0,0,0.31),0px 2px 7px 3px rgba(0,0,0,0.3), inset 0px 43px 44px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0px -43px 35px -18px rgba(0,0,0,0.28), inset -40px 0px 32px -30px rgba(0,0,0,0.31), inset 40px 0px 32px -30px rgba(0,0,0,0.31),0px 2px 7px 3px rgba(0,0,0,0.3), inset 0px 43px 44px 3px rgba(0,0,0,0.3);
 }
 #letter-back_bot {
-  box-shadow: inset 0px -20px 40px 10px rgba(0,0,0,0.31), inset -40px 0px 32px -45px rgba(0,0,0,0.31), inset 40px 0px 32px -45px rgba(0,0,0,0.31), inset 0px 43px 44px 3px rgba(0,0,0,0.3);
+  box-shadow: inset 0px -20px 40px 10px rgba(0,0,0,0.31), inset -40px 0px 32px -45px rgba(0,0,0,0.31), inset 40px 0px 32px -45px rgba(0,0,0,0.31), inset 0px 25px 44px 3px rgba(0,0,0,0.25), 0px -2px 20px 5px rgba(0,0,0,0.4);
 }
 #letter form {
   background: url('../img_modif/white-parchment-paper-texture.jpg');
-  box-shadow: inset 0px -39px 7px -30px rgba(0,0,0,0.31), inset -40px 0px 32px -20px rgba(0,0,0,0.41), inset 40px 0px 32px -20px rgba(0,0,0,0.31),inset 0px 43px 32px -30px rgba(0,0,0,0.31);
+  box-shadow: inset 0px -39px 7px -30px rgba(0,0,0,0.31), inset -40px 0px 32px -20px rgba(0,0,0,0.41), inset 40px 0px 32px -20px rgba(0,0,0,0.31);
 }
 .open-on_up {
   transform: translateY(-90%) rotateX(150deg);
 }
 .open-on_down {
-  transform: translateY(80%) rotateX(-130deg);
+  transform: translateY(80%) rotateX(-160deg);
 
 }
 .letter__button-back {
-  bottom: -16%;
+  bottom: 85%;
 }
 
 .contact__icon {
@@ -507,11 +502,7 @@ input[type="email"] {
 }
 
 /* ______________MEDIA SCREEN */
-@media screen and (max-width: 350px) {
-  .letter__button-back {
-    bottom: -14%;
-  }
-}
+
 @media screen and (max-width: 767px) {
   #contact-event .icon-bg {
     visibility: hidden;
