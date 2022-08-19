@@ -10,7 +10,8 @@ let clicked = false;
 console.log(sectionContact.clientHeight)
 
 /// Fonctions : 
-letterUp.addEventListener('click', () => {
+letterUp.addEventListener('click', e => {
+    e.preventDefault();
     if (clicked){
         return;
     } else {
@@ -31,4 +32,30 @@ letterUp.addEventListener('click', () => {
     console.log(totalHeight)
     sectionContact.style.height = totalHeight-120 + 'px';
     letter.style.transform = 'translateY(55%)';
+})
+
+// Disabled option 
+///Variables 
+const secondPartLetter = document.querySelector('.form__second-part');
+
+secondPartLetter.addEventListener('click', e => {
+    
+    const inputSelect = secondPartLetter.querySelectorAll('.form-select');
+    const inputRadio  = secondPartLetter.querySelectorAll('.form-check-input');
+
+    Array.from(inputRadio, (input,index) => {
+        if (index < 3){
+            inputSelect[index].disabled = true;
+        }
+        if (e.target != input){
+            return;
+        }
+        if (input.checked){
+            if (input == inputRadio[3]){
+                return;
+            } else {
+                inputSelect[index].disabled = false;
+            }
+        } 
+    })
 })

@@ -448,10 +448,13 @@ input[type="email"] {
   background-color: var(--bs-light);
   border-color: black;
 }
+#reason:disabled {
+  opacity: .5;
+}
 
 .form-check-input:checked {
-  background-color: #2ad496;
-  border-color: #2ad496;
+  background-color: #000000;
+  border-color: #000000;
 }
 .contact__letter {
   transform-style: preserve-3d;
