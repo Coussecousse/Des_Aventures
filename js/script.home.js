@@ -40,11 +40,6 @@ window.addEventListener('scroll', () => {
     let h = window.innerHeight;
 
     if (scrollY >= distanceFromTheTopFirst - h){
-        // setTimeout(() => {
-        //     dicesGoBack.forEach( dice => {
-        //         dice.style.zIndex = '-6';
-        //     })
-        // }, 530);
         FirstBlackCube.classList.add('cube-left');
         setTimeout(() => {
             FirstBrushLeft.style.zIndex = 1;
@@ -54,7 +49,7 @@ window.addEventListener('scroll', () => {
         SecondBrush.classList.add('brush__splash-visible');
         SecondBrush.style.zIndex = '1'
     }
-    if (scrollY >= distanceFromTheTopThird - h ){
+    if (scrollY >= distanceFromTheTopThird - h){
         LastBlackCube.classList.add('cube-right');
         setTimeout(() => {
             thirdBrushRight.style.zIndex = 1;

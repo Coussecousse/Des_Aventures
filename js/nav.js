@@ -118,12 +118,16 @@ const liLastElement = new ElementNav(
 const aLastElement = new ElementNav(
   aLast,
   ['nav-link', 'link-light'],
-  liLast,
+  liLast,  
+  undefined,
+  '',
+  'https://www.facebook.com/desaventures'
 );
 const iElement = new ElementNav(
   i,
   ['fa-brands', 'fa-facebook','fa-2xl'],
-  aLast
+  aLast,
+
 )
 const createdElement = [headerElement, ButtonElement, PNavElement, imgElement, divElement, navElement, ulElement, liLastElement, aLastElement, iElement];
 
@@ -133,7 +137,7 @@ for (let i = 0; i < createdElement.length; i++) {
   createdElement[i].setElement();
 }
 function initMultipleLi(){
-  const hrefList =  ['#home', '#presentation', '' ,''];
+  const hrefList =  ['../index.html#home', '../index.html#presentation', '../event-contact.html#pre-event' ,'../event-contact.html#contact'];
   const textAList = ['Accueil', 'Présentation', 'Soirées', 'Contact'];
   for (let i = 0; i < hrefList.length; i++){
     let li = document.createElement('li');
