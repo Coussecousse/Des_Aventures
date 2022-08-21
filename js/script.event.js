@@ -1,11 +1,11 @@
 // Animation du formulaire :
 
 /// Variables : 
-const letterUp = document.querySelector('#letter_up');
-const letterDown = document.querySelector('#letter_down');
+const letterUp       = document.querySelector('#letter_up');
+const letterDown     = document.querySelector('#letter_down');
 const sectionContact = document.querySelector('#contact__container');
-const letter = document.querySelector('#letter');
-let clicked = false;
+const letter         = document.querySelector('#letter');
+let clicked          = false;
 
 console.log(sectionContact.clientHeight)
 
@@ -17,10 +17,10 @@ letterUp.addEventListener('click', e => {
     } else {
         clicked = true;
     }
-    const heightContact = sectionContact.clientHeight;
-    const heightLetterUp = letterUp.clientHeight;
+    const heightContact    = sectionContact.clientHeight;
+    const heightLetterUp   = letterUp.clientHeight;
     const heightLetterDown = letterDown.clientHeight;
-    const totalHeight = heightContact + heightLetterUp + heightLetterDown;
+    const totalHeight      = heightContact + heightLetterUp + heightLetterDown;
 
     letterUp.classList.add('open-on_up');
     letterDown.classList.add('open-on_down');
@@ -31,31 +31,75 @@ letterUp.addEventListener('click', e => {
     }
     console.log(totalHeight)
     sectionContact.style.height = totalHeight-120 + 'px';
-    letter.style.transform = 'translateY(55%)';
+    letter.style.transform      = 'translateY(55%)';
 })
 
 // Disabled option 
 ///Variables 
-const secondPartLetter = document.querySelector('.form__second-part');
+const form = document.querySelector('form');
 
-secondPartLetter.addEventListener('click', e => {
+form.addEventListener('click', e => {
     
-    const inputSelect = secondPartLetter.querySelectorAll('.form-select');
-    const inputRadio  = secondPartLetter.querySelectorAll('.form-check-input');
+    const inputsSelect = form.querySelectorAll('.form-select');
+    const inputsRadio  = form.querySelectorAll('.form-check-input[type=radio]');
 
-    Array.from(inputRadio, (input,index) => {
-        if (index < 3){
-            inputSelect[index].disabled = true;
-        }
-        if (e.target != input){
-            return;
-        }
-        if (input.checked){
-            if (input == inputRadio[3]){
+    Array.from(inputsRadio, (input, index) => {
+        if (e.target == input || e.target == inputsSelect[index]){
+            if (e.target.disabled == true){
                 return;
             } else {
-                inputSelect[index].disabled = false;
+                if (index == 3){
+                    return;
+                }
+                inputsSelect[index].disabled = false;
             }
-        } 
-    })
-})
+        } else {
+            if (!input.checked && index < 3){
+                inputsSelect[index].disabled = true;
+            }
+        }
+    });
+    // Check si toutes les valeurs sont valides :
+    
+    /// Variables
+    const submitButton   = form.querySelector('button[type=submit]')
+    const name           = form.querySelector('#name');
+    const email          = form.querySelector('#email');
+    const textarea       = form.querySelector('textarea');
+    const commitment     = form.querySelector('.form-check-input[type=checkbox]')
+    const elementsToCheck = [name, email, textarea, inputsSelect, commitment]
+    let elementsValid = 0;
+
+    /// Fonctions
+    for (let i = 0; i < elementsToCheck.length; i++){
+        submitButton.disabled = true;
+        if (i < 3){
+            if (elementsToCheck[i].checkValidity()){
+                elementsValid++;
+            }
+        } else if (i == 3){
+            if (inputsRadio[3].checked) {
+                elementsValid++;
+            } else {
+                inputsSelect.forEach(select => {
+                    if (!select.disabled){
+                        for (option of select){
+                            if (option.selected && option.value != ''){
+                                elementsValid++;
+                            }
+                        }
+                    }
+                })
+            }
+        } else if (i == 4){
+            if (commitment.checked){
+                elementsValid++;
+            }
+        }
+    }
+    if (elementsValid == 5){
+        submitButton.disabled = false;
+    }
+});
+
+ 

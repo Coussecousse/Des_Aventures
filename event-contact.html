@@ -284,13 +284,13 @@
                   <div id="letter-back_top" class="position-absolute h-100 col-12 bg-light">
                     <button class="letter__button-back position-absolute start-50 translate-middle-x bg-transparent"><img src="../../img_modif/stamp-50-1.png" alt="" style="height: 100px; z-index: -5"></button>
                     <div class="position-relative top-50">
-                      <div class="mb-1 col-10 mx-auto">
+                      <div class="mb-1 col-10 mx-auto position-relative">
                         <label for="name" class="form-label" >Nom :</label>
-                        <input type="text" class="form-control bg-transparent fs-5 p-0 ps-1" id="name">
+                        <input type="text" class="form-control bg-transparent fs-5 p-0 ps-1" id="name" minlength="3" maxlength="30" placeholder="Veuillez rentrer un nom valide."required><span></span></input>
                       </div>
-                      <div class="col-10 mx-auto">
+                      <div class="col-10 mx-auto  position-relative">
                         <label for="email" class="form-label">Email :</label>
-                        <input type="email" class="form-control bg-transparent fs-5 " id="email">
+                        <input type="email" class="form-control bg-transparent fs-5" id="email" required placeholder="Veuillez rentrer une adresse mail valide."><span></span></input>
                       </div>
                     </div>
                   </div>
@@ -309,12 +309,12 @@
                       <select class="form-select bg-transparent fs-5" id="reason">
                         <option value="">-- Choisir</option>
                         <option value="" class="form__event">For the Queen</option>
-                        <option value="" class="form__event">CHRONIQUES OUBLIEES : La relique Défendue</option>
-                        <option value="" class="form__event">Donjons & Dragons 5ème édition</option>
-                        <option value="" class="form__event">City of Mist</option>
-                        <option value="" class="form__event">Campagne « Les Marches de L'ouest » FALLOUT - Session #1</option>
-                        <option value="" class="form__event">CHRONIQUES OUBLIÉES : Mystère à Clairval</option>
-                        <option value="" class="form__event">For the Crown</option>
+                        <option value="CHRONIQUES OUBLIEES" class="form__event">CHRONIQUES OUBLIEES : La relique Défendue</option>
+                        <option value="D&D" class="form__event">Donjons & Dragons 5ème édition</option>
+                        <option value="City of Mist" class="form__event">City of Mist</option>
+                        <option value="FALLOUT" class="form__event">Campagne « Les Marches de L'ouest » FALLOUT - Session #1</option>
+                        <option value="CHRONIQUES OUBLIEES" class="form__event">CHRONIQUES OUBLIÉES : Mystère à Clairval</option>
+                        <option value="For the Crown" class="form__event">For the Crown</option>
                       </select>
                     </div>
                     <div class="form-check">
@@ -326,11 +326,11 @@
                     <div class="mb-3">
                       <select class="form-select bg-transparent fs-5" id="reason" disabled>
                         <option value="">-- Choisir</option>
-                        <option value="" class="form__event">ONIRIS- "Un Bruit Au Fond Du Trou"</option>
-                        <option value="" class="form__event">STAR WARS - "Une Nuit À La Station Tosche"</option>
-                        <option value="" class="form__event">Rune</option>
-                        <option value="" class="form__event">KAAMELOTT - "Excalibur a disparu"</option>
-                        <option value="" class="form__event">FALLOUT - Campagne "Les Marches de l'ouest" #5</option>
+                        <option value="ONIRIS" class="form__event">ONIRIS- "Un Bruit Au Fond Du Trou"</option>
+                        <option value="STAR WARS" class="form__event">STAR WARS - "Une Nuit À La Station Tosche"</option>
+                        <option value="Rune" class="form__event">Rune</option>
+                        <option value="KAAMELOT" class="form__event">KAAMELOTT - "Excalibur a disparu"</option>
+                        <option value="FALLOUT" class="form__event">FALLOUT - Campagne "Les Marches de l'ouest" #5</option>
                       </select>
                     </div>
                     <div class="form-check">
@@ -342,12 +342,12 @@
                     <div class="mb-3">
                       <select class="form-select bg-transparent fs-5" id="reason" disabled>
                         <option value="">-- Choisir</option>
-                        <option value="" class="form__event">Hogward</option>
-                        <option value="" class="form__event">Alien</option>
-                        <option value="" class="form__event">CHRONIQUE OUBLIÉES : Les Mystères de Clairval (Partie II)</option>
-                        <option value="" class="form__event">LE DONJON DE NAHEULBEUK: Les ruines d'Asvaard</option>
-                        <option value="" class="form__event">HONEY HEIST : Le Plan "Tigrade"</option>
-                        <option value="" class="form__event">Face au Titan</option>
+                        <option value="Hogward" class="form__event">Hogward</option>
+                        <option value="Alien" class="form__event">Alien</option>
+                        <option value="CHRONIQUE OUBLIEES" class="form__event">CHRONIQUE OUBLIÉES : Les Mystères de Clairval (Partie II)</option>
+                        <option value="NAHEULBEUK" class="form__event">LE DONJON DE NAHEULBEUK: Les ruines d'Asvaard</option>
+                        <option value="HONEY HEIST" class="form__event">HONEY HEIST : Le Plan "Tigrade"</option>
+                        <option value="Face au Titan" class="form__event">Face au Titan</option>
                       </select>
                     </div>
                     <div class="form-check mb-3">
@@ -358,7 +358,7 @@
                     </div>
                   </div>
                   <div class="form-group mb-5 col-10 mx-auto">
-                    <textarea class="form-control fs-5 pt-1 bg-transparent" placeholder="Message..." id="floatingTextarea" style="height: 100px"></textarea>
+                    <textarea class="form-control fs-5 pt-1 bg-transparent" placeholder="Un petit message, ça fait plaisir !" id="floatingTextarea" style="height: 100px" required></textarea>
                   </div>
                 </div>
                 <div id="letter_down" class="contact__letter position-absolute col-12 m-0 p-0 bg-light bottom-0" style="z-index: 5;height: 45%">

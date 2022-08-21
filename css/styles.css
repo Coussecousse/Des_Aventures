@@ -389,6 +389,19 @@ h5 {
   font-size: var(--fs-600);
 }
 
+
+#letter input:invalid + span:after {
+  content: '✖';
+  position: absolute;
+  bottom: -5%;
+  right: 2%;
+}
+#letter input:valid + span:after{
+  content:'✓';
+  position: absolute;
+  bottom: -5%;
+  right: 2%;
+}
 #letter input:focus,
 #letter input:active,
 #letter textarea:focus,
@@ -396,7 +409,6 @@ h5 {
 #letter select:focus
  {
   border-color: #000;
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.6);
 }
 .event__choice-date,
@@ -432,7 +444,6 @@ h5 {
 
 input[type="text"],
 input[type="email"] {
-  background: var(--bs-light);
   border-radius: 0;
   border: none;
 }
