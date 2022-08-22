@@ -7,7 +7,6 @@ const sectionContact = document.querySelector('#contact__container');
 const letter         = document.querySelector('#letter');
 let clicked          = false;
 
-console.log(sectionContact.clientHeight)
 
 /// Fonctions : 
 letterUp.addEventListener('click', e => {
@@ -29,7 +28,6 @@ letterUp.addEventListener('click', e => {
     } else {
         document.documentElement.style.setProperty('--h-letter', totalHeight + 'px');
     }
-    console.log(totalHeight)
     sectionContact.style.height = totalHeight-120 + 'px';
     letter.style.transform      = 'translateY(55%)';
 })
@@ -102,4 +100,107 @@ form.addEventListener('click', e => {
     }
 });
 
- 
+// Le carousel dynamique sur les histoires : 
+
+/// Variables: 
+const carousel = document.querySelector('.carousel-inner');
+const buttonsEvent = document.querySelectorAll('.event__choice-date');
+/// Récupérer le fichier json : 
+let jsonStories;
+fetch('../stories.json')
+.then(response => { 
+    return response.json();
+ })
+.then(json => {
+    jsonStories = json;
+    for (let i = 0; i < jsonStories[0].FirstNight.length; i++){
+        carousel.appendChild(createStoryElement(jsonStories[0].FirstNight, i))
+    }
+});
+
+/// Fonctions :
+
+
+buttonsEvent.forEach(button => {
+
+
+    button.addEventListener('click', () => {
+
+        if (button.getAttribute('aria-expanded') == 'false'){
+            return;
+        }
+
+        console.log(jsonStories)
+
+        carousel.textContent = '';
+
+        switch(button.dataset.night) {
+            case '1':
+                for (let i = 0; i < jsonStories[0].FirstNight.length; i++){
+                    carousel.appendChild(createStoryElement(jsonStories[0].FirstNight, i))
+                }
+                break;
+            case '2':
+                for (let i = 0; i < jsonStories[1].SecondNight.length; i++){
+                    carousel.appendChild(createStoryElement(jsonStories[1].SecondNight, i))
+                }
+                break;
+            case '3': 
+                console.log(jsonStories[2])
+                for (let i = 0; i < jsonStories[2].LastNight.length; i++){
+                    carousel.appendChild(createStoryElement(jsonStories[2].LastNight, i))
+                }
+                break;
+        }
+    })
+})
+function createStoryElement(jsonStory, i){
+    const grandParent = document.createElement('div');
+    grandParent.classList.add('carousel__story', 'carousel-item', 'w-100', 'h-100');
+    if (i == 0){
+        grandParent.classList.add('active');
+    }
+    
+    const parent = document.createElement('div');
+    parent.classList.add('h-100', 'p-3', 'd-flex', 'flex-column', 'justify-content-between');
+
+    const titleContainer = document.createElement('div');
+    titleContainer.classList.add('text-center', 'mt-5');
+    parent.appendChild(titleContainer);
+
+    const title      = document.createElement('h5');
+    title.classList.add('fs-2');
+    title.textContent   = jsonStory[i].title;
+    titleContainer.appendChild(title);
+
+    const pDate       = document.createElement('p');
+    pDate.textContent = jsonStory[i].date;
+    title.after(pDate);
+
+    const pStory       = document.createElement('p');
+    pStory.classList.add('p-4', 'p-sm-5', 'm-1');
+    pStory.textContent = jsonStory[i].story;
+    titleContainer.after(pStory);
+
+    const endContainer = document.createElement('div');
+    endContainer.classList.add('ps-5', 'm-1');
+    pStory.after(endContainer);
+
+    const pMJ       = document.createElement('p')
+    pMJ.textContent = 'MJ: '+ jsonStory[i].MJ;
+    endContainer.appendChild(pMJ);
+
+    const pPlaces       = document.createElement('p');
+    pPlaces.textContent = 'Places: '+ jsonStory[i].places;
+    pMJ.after(pPlaces);
+
+    const pID       = document.createElement('p');
+    pID.classList.add('text-end', 'p-0', 'pe-5');
+    pID.textContent = jsonStory[i]._id;
+    pPlaces.after(pID);
+
+    grandParent.appendChild(parent)
+
+    
+    return grandParent;
+}
