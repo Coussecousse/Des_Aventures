@@ -10,11 +10,13 @@ let clicked = false;
 /// Fonctions :
 letterUp.addEventListener("click", (e) => {
   e.preventDefault();
+  
   if (clicked) {
     return;
   } else {
     clicked = true;
   }
+
   const heightContact = sectionContact.clientHeight;
   const heightLetterUp = letterUp.clientHeight;
   const heightLetterDown = letterDown.clientHeight;
@@ -33,7 +35,7 @@ letterUp.addEventListener("click", (e) => {
       totalHeight + "px"
     );
   }
-  sectionContact.style.height = totalHeight - 120 + "px";
+  sectionContact.style.height = totalHeight - 50 + "px";
   letter.style.transform = "translateY(55%)";
 });
 
