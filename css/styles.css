@@ -76,6 +76,8 @@ body {
   font-family: var(--ff);
   font-size: var(--fs-500);
 }
+
+
 /* BOUTON MENU & MENU */
 header li {
   cursor: pointer;
@@ -314,7 +316,7 @@ button {
           animation: 0.5s ease-in-out upAndDown alternate infinite;
 }
 
-/* STYLE PRESENTATION */
+/* STYLE #PRESENTATION */
 #presentation {
   font-family: var(--ff-500);
   font-weight: var(--fw-600);
@@ -522,7 +524,7 @@ h5 {
   }
 }
 
-/* footer */
+/* FOOTER  */
 .footer__link::after,
 .footer__link::before {
   content: "";
@@ -543,6 +545,7 @@ h5 {
 .fa-facebook:hover {
   color: var(--color-green);
 }
+/* _______________________________________ */
 /* EVENT & CONTACT */
 .carousel__story {
   background: url("../img_modif/white-parchment-paper-texture.jpg");
