@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
+    <title>Dés Aventures</title>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"  content="L'association Dés Aventures vous présente ses prochaines soirées jeud de rôles. Venez choisir votre aventure !"/>
     <link
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
@@ -24,7 +26,6 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
-    <title>Dés Aventures</title>
   </head>
   <body id="body-events" class="vw-100 bg-black" style="overflow-x: hidden">
     <header></header>
@@ -236,7 +237,7 @@
           <div id="contact__container" class="container">
             <p class="contact__p fs-1 text-center col-11 mx-auto">D'abord, tu choisis ton <span>aventure </span>à la <span>date</span> qui te convient puis tu nous contactes pour réserver ta <span>place</span> !</p>
             <div id="letter" class="col-11 mx-auto col-md-8 col-lg-6 m-5 text-black position-relative">
-              <form class="col-12 fs-5">
+              <form class="col-12 fs-5" title="Formulaire de contact">
                 <div id="letter_up" class="contact__letter position-absolute border-bottom border-secondary col-12 m-0 p-0" style="z-index: 6;height: 55%;">
                   <div id="letter-front_top" class="position-absolute h-100 col-12">
                     <h5 class="text-center fs-1 position-relative top-50 translate-middle-y">Formulaire de contact</h5>
@@ -267,7 +268,7 @@
                       </label>
                     </div>
                     <div class="mb-3">
-                      <select class="form-select bg-transparent fs-5" id="reason" aria-label="Choix soirée 02/10/2022">
+                      <select class="form-select bg-transparent fs-5" aria-label="Choix soirée 02/10/2022">
                         <option value="">-- Choisir</option>
                         <option value="" class="form__event">For the Queen</option>
                         <option value="CHRONIQUES OUBLIEES" class="form__event">CHRONIQUES OUBLIEES : La relique Défendue</option>
@@ -279,13 +280,13 @@
                       </select>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="reason" id="secondDate" value="secondDate">
+                      <input class="form-check-input" type="radio" id="secondDate" value="secondDate">
                       <label class="form-check-label" for="secondDate">
                         16/10/2022
                       </label>
                     </div>
                     <div class="mb-3">
-                      <select class="form-select bg-transparent fs-5" id="reason" disabled aria-label="Choix soirée du 16/10/2022">
+                      <select class="form-select bg-transparent fs-5"disabled aria-label="Choix soirée du 16/10/2022">
                         <option value="">-- Choisir</option>
                         <option value="ONIRIS" class="form__event">ONIRIS- "Un Bruit Au Fond Du Trou"</option>
                         <option value="STAR WARS" class="form__event">STAR WARS - "Une Nuit À La Station Tosche"</option>
@@ -301,7 +302,7 @@
                       </label>
                     </div>
                     <div class="mb-3">
-                      <select class="form-select bg-transparent fs-5" id="reason" disabled aria-label="Choix soirée du 30/10/2022">
+                      <select class="form-select bg-transparent fs-5" disabled aria-label="Choix soirée du 30/10/2022">
                         <option value="">-- Choisir</option>
                         <option value="Hogward" class="form__event">Hogward</option>
                         <option value="Alien" class="form__event">Alien</option>
@@ -319,7 +320,7 @@
                     </div>
                   </div>
                   <div class="form-group mb-5 col-10 mx-auto">
-                    <textarea class="form-control fs-5 pt-1 bg-transparent" placeholder="Un petit message, ça fait plaisir !" id="floatingTextarea" style="height: 100px" required></textarea>
+                    <textarea aria-label="Message..." class="form-control fs-5 pt-1 bg-transparent" placeholder="Un petit message, ça fait plaisir !" id="floatingTextarea" style="height: 100px" required></textarea>
                   </div>
                 </div>
                 <div id="letter_down" class="contact__letter position-absolute col-12 m-0 p-0 bottom-0" style="z-index: 5;height: 45%">

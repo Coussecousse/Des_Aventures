@@ -639,10 +639,7 @@ input[type="email"] {
   border-radius: 10px;
   border: 1px solid black;
 }
-#reason {
-  background-color: var(--bs-light);
-  border-color: black;
-}
+
 #reason:disabled {
   opacity: 0.5;
 }
