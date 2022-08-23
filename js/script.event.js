@@ -106,7 +106,7 @@ form.addEventListener('click', e => {
 const carouselParent = document.querySelector('.carousel')
 const carousel = document.querySelector('.carousel-inner');
 const buttonsEvent = document.querySelectorAll('.btn-group');
-let clickedOneTime = false;
+
 /// Récupérer le fichier json : 
 let jsonStories;
 fetch('../stories.json')
