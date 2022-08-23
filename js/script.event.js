@@ -103,8 +103,10 @@ form.addEventListener('click', e => {
 // Le carousel dynamique sur les histoires : 
 
 /// Variables: 
+const carouselParent = document.querySelector('.carousel')
 const carousel = document.querySelector('.carousel-inner');
-const buttonsEvent = document.querySelectorAll('.event__choice-date');
+const buttonsEvent = document.querySelectorAll('.btn-group');
+let clickedOneTime = false;
 /// Récupérer le fichier json : 
 let jsonStories;
 fetch('../stories.json')
@@ -120,21 +122,81 @@ fetch('../stories.json')
 
 /// Fonctions :
 
+carouselParent.addEventListener('click', e =>{
+    console.log('clic')
+    const buttonPrev = carouselParent.querySelector('.carousel-control-prev');
+    const buttonNext = carouselParent.querySelector('.carousel-control-next');
+    let activeButtonSelector;
 
+    if (e.target != buttonPrev && e.target != buttonNext && e.target != buttonPrev.children[0] && e.target != buttonNext.children[0]){
+        return;
+    }
+
+    // Chercher quel button est actif :
+    for (let i = 0; i < buttonsEvent.length; i++){
+        if (buttonsEvent[i].children[0].classList.contains('event__choice-active')){
+            activeButtonSelector = buttonsEvent[i];
+        }
+    }
+    console.log(activeButtonSelector);
+    const ul = activeButtonSelector.querySelector('ul');
+    const liList = ul.querySelectorAll('li');
+    let activeLi;
+    liList.forEach( li => {
+        if (li.children[0].classList.contains('dropdown-active')){
+            activeLi = li;
+        }
+    })
+    
+    if (e.target == buttonPrev || e.target == buttonPrev.children[0]){
+        let liToBeActive;
+        if (activeLi == ul.children[0]){
+            liToBeActive = ul.children[ul.children.length-1];
+            console.log(liToBeActive)
+            liToBeActive.children[0].classList.add('dropdown-active');
+        } else {
+            liToBeActive = activeLi.previousElementSibling;
+            console.log(liToBeActive);
+            liToBeActive.children[0].classList.add('dropdown-active');
+        }
+        activeLi.children[0].classList.remove('dropdown-active');
+    }
+    if (e.target == buttonNext || e.target == buttonNext.children[0]){
+        let liToBeActive;
+        if (activeLi == ul.children[ul.children.length-1]){
+            liToBeActive = ul.children[0];
+            console.log(liToBeActive)
+            liToBeActive.children[0].classList.add('dropdown-active');
+        } else {
+            liToBeActive = activeLi.nextElementSibling;
+            console.log(liToBeActive);
+            liToBeActive.children[0].classList.add('dropdown-active');
+        }
+        activeLi.children[0].classList.remove('dropdown-active');
+    }
+
+})
 buttonsEvent.forEach(button => {
 
+    button.addEventListener('click', e => {
 
-    button.addEventListener('click', () => {
-
-        if (button.getAttribute('aria-expanded') == 'false'){
+        const ulEvent = button.querySelector('ul');
+        if (button.children[0].classList.contains('event__choice-active')){
             return;
         }
+        for (let i = 0; i < buttonsEvent.length; i++){
+            if (buttonsEvent[i].children[0].classList.contains('event__choice-active')){
+                buttonsEvent[i].children[0].classList.remove('event__choice-active');
+            }
+        }
+        button.children[0].classList.add('event__choice-active');
 
-        console.log(jsonStories)
+        removeActiveLi(ulEvent);
+        ulEvent.children[0].children[0].classList.add('dropdown-active'); // Selectionne le tout premier de la liste
 
         carousel.textContent = '';
 
-        switch(button.dataset.night) {
+        switch(button.children[0].dataset.night) {
             case '1':
                 for (let i = 0; i < jsonStories[0].FirstNight.length; i++){
                     carousel.appendChild(createStoryElement(jsonStories[0].FirstNight, i))
@@ -146,14 +208,19 @@ buttonsEvent.forEach(button => {
                 }
                 break;
             case '3': 
-                console.log(jsonStories[2])
                 for (let i = 0; i < jsonStories[2].LastNight.length; i++){
                     carousel.appendChild(createStoryElement(jsonStories[2].LastNight, i))
                 }
                 break;
         }
+
+        ulEvent.addEventListener('click', e => {
+           removeActiveLi(ulEvent);
+            e.target.classList.add('dropdown-active')
+        })
     })
 })
+
 function createStoryElement(jsonStory, i){
     const grandParent = document.createElement('div');
     grandParent.classList.add('carousel__story', 'carousel-item', 'w-100', 'h-100');
@@ -203,4 +270,14 @@ function createStoryElement(jsonStory, i){
 
     
     return grandParent;
+}
+
+function removeActiveLi(ul){
+    for (let i  = 0; i < ul.children.length; i++){
+        let li = ul.children[i];
+        let button = li.children[0];
+        if (button.classList.contains('dropdown-active')){
+            button.classList.remove('dropdown-active')
+        }
+    }
 }

@@ -6,7 +6,7 @@
         "title": "For the Queen",
         "date": "19/08/2022",
         "story": "Depuis votre naissance, le royaume où vous vivez a toujours été en guerre. La Reine a décidé d’entreprendre un long et périlleux périple pour négocier une alliance avec une puissance étrangère. La Reine vous a choisi vous, et personne d’autre, pour être son escorte et l’accompagner dans ce voyage. Elle vous a choisi car elle sait que vous l’aimez. Mais la défendrez vous le moment venu ?",
-        "MJ": "MARTIN M.",
+        "MJ": "Martin M.",
         "places": "4/5"
       },
       {
@@ -37,12 +37,20 @@
         "_id": 4,
         "title": "Campagne « Les Marches de L'ouest » FALLOUT - Session #1",
         "date": "19/08/2022",
+        "story": "Vous incarnerez des survivants de l'abri 11. Ces résidents désorientés, récemment et brutalement sortis de leur prison virtuelle par un (étrange) groupe venant du monde extérieur n'auront pas le temps de se remettre de leurs émotions. Vous décidez d'aller explorer ce nouveau monde qui s'ouvre à vous. Créez votre personnage de campagne et bouleversez l'univers en influant, par vos actions, l'avenir des 'Terres Désolées de la Baie' créées spécialement pour cette aventure.",
+        "MJ": "Robin C.",
+        "places": "5/5"
+      },
+      {
+        "_id": 5,
+        "title": "CHRONIQUES OUBLIÉES : Mystère à Clairval",
+        "date": "19/08/2022",
         "story": "Depuis deux jours, le petit village de Clairval vit dans la peur. Des villageois ont mystérieusement disparu et nul ne sait ce qu’ils sont devenus. Désespérés, les gens du village sont prêts à récompenser de plusieurs centaines de pièces d’argent ceux qui seraient capables de trouver une solution à leur problème. Que vous soyez magicien, guerrier, prêtre, rôdeur ou voleur, vos qualités de héros sont indispensables à la résolution de ce mystère. Rejoignez-moi dans cette aventure pleine de rebondissements, de bons coups à boire et de cavernes mystérieuses.",
         "MJ": "Corinne I.",
         "places": "5/5"
       },
       {
-        "_id": 5,
+        "_id": 6,
         "title": "For the Crown",
         "date": "19/08/2022",
         "story": "Sa Majesté vit ses dernières heures et ne possède aucun héritier officiel. Un trône vacant provoquerait de graves remous dans le pays, il faut donc qu’un prétendant se démarque pour saisir la couronne et apaiser le peuple comme la cour. Chaque joueur incarne une personnalité influente du royaume qui juge avoir des droits sur la succession, la partie déterminera si l’un d’eux sera couronné.",
