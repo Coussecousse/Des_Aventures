@@ -94,7 +94,7 @@ const imgElement = new ElementNav(
   undefined,
   undefined,
   true,
-  "../../img_modif/black_dice-min-min.png",
+  "./img/black_dice-min-min.webp",
   "Dé blanc menu"
 );
 const divElement = new ElementNav(divNav, [
