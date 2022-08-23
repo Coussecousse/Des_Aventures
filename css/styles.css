@@ -175,10 +175,8 @@ button {
   position: relative;
 }
 #white-dice {
-  left: var(--left-wDice);
 }
 #green-dice {
-  left: var(--left-gDice);
   top: var(--t-gDice);
 }
 .Gdice__move-in {
