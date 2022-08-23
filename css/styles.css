@@ -178,14 +178,14 @@ button {
   visibility: hidden;  
   opacity: 0;
   left: var(--left-wDice);
-  transition: all 1.5s ease-out;
+  transition: all 1s ease-out;
 }
 #green-dice {
   visibility: hidden;
   opacity: 0;
   left: var(--left-gDice);
   top: var(--t-gDice);
-  transition: all 1s ease-out;
+  transition: all .4s ease-out;
 }
 .Gdice__move-in {
   visibility: visible !important;
