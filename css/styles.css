@@ -640,8 +640,12 @@ input[type="email"] {
   border: 1px solid black;
 }
 
-#reason:disabled {
+.reason:disabled {
   opacity: 0.5;
+  border-color: silver;
+}
+.reason {
+  border: 1px solid black;
 }
 
 .form-check-input:checked {
