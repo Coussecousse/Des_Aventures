@@ -175,15 +175,23 @@ button {
   position: relative;
 }
 #white-dice {
+  visibility: hidden;  
+  left: var(--left-wDice);
+  transition: 1.5s ease-out;
 }
 #green-dice {
+  visibility: hidden;
+  left: var(--left-gDice);
   top: var(--t-gDice);
+  transition: 2s ease-out;
 }
 .Gdice__move-in {
+  visibility: visible !important;
   -webkit-animation: 2s ease-out WmoveIn;
           animation: 2s ease-out WmoveIn;
 }
 .Wdice__move-in {
+  visibility: visible !important;
   -webkit-animation: 1.5s ease-out WmoveIn;
           animation: 1.5s ease-out WmoveIn;
 }
