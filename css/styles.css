@@ -409,7 +409,35 @@ h5 {
 .icon-bg {
   position: absolute;
   z-index: -1;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
+.dice-100 {
+  background-image: url('../img/dice-100.webp');
+}
+.dice-20 {
+  background-image: url('../img/dice-20.webp');
+}
+.dice-12 {
+  background-image: url('../img/dice-12.webp');
+}
+.dice-20 {
+  background-image: url('../img/dice-20.webp');
+}
+.dice-8 {
+  background-image: url('../img/dice-8.webp');
+}
+
+.dice-8-2 {
+  background-image: url('../img/dice-8-2.webp');
+}
+.dice-4 {
+  background-image: url('../img/dice-4.webp');
+}
+.dice-6 {
+  background-image: url('../img/dice-6.webp');
+}
+
 .presentation__brush {
   width: var(--w-brush);
   -o-object-fit: contain;
