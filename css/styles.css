@@ -176,21 +176,25 @@ button {
 }
 #white-dice {
   visibility: hidden;  
+  opacity: 0;
   left: var(--left-wDice);
-  transition: 1.5s ease-out;
+  transition: all 1.5s ease-out;
 }
 #green-dice {
   visibility: hidden;
+  opacity: 0;
   left: var(--left-gDice);
   top: var(--t-gDice);
-  transition: 2s ease-out;
+  transition: all 1s ease-out;
 }
 .Gdice__move-in {
   visibility: visible !important;
+  opacity: 1 !important;
   -webkit-animation: 2s ease-out WmoveIn;
           animation: 2s ease-out WmoveIn;
 }
 .Wdice__move-in {
+  opacity: 1 !important;
   visibility: visible !important;
   -webkit-animation: 1.5s ease-out WmoveIn;
           animation: 1.5s ease-out WmoveIn;
